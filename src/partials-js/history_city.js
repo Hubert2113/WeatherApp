@@ -1,5 +1,20 @@
-const storageLength = lengthStorage();
-seveStorage(storageLength, dane.name);
+import { saveStorage, loadStorage, removeStorage } from './storage';
+
+export function historyAddCity(dane) {
+  const storageLength = localStorage.length;
+  console.log(city[name]);
+  saveStorage(storageLength, city.name);
+}
+
+export function historyCityVieve() {
+  const storageLength = localStorage.length;
+  const arrayOfCity = [];
+  for (let index = 0; index < storageLength; index++) {
+    const element = loadStorage(index);
+    arrayOfCity.push(element);
+  }
+  return arrayOfCity;
+}
 
 const dane = [
   {
