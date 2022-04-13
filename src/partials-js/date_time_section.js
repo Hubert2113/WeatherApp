@@ -1,3 +1,6 @@
+import './sass/main.scss';
+import { getCityWeather } from './partials-js/data_fetch';
+
 const cityDateTag = document.querySelector('section.city-date');
 
 console.log(response.city.sunrise);
