@@ -1,6 +1,3 @@
-import _ from 'lodash';
-import { seveStorage, loadStorage, removeStorage, lengthStorage } from './storage';
-
 const storageLength = lengthStorage();
 seveStorage(storageLength, dane.name);
 
