@@ -27,5 +27,6 @@
   },
   "dependencies": {
     "chart.js": "^3.7.1"
+    "axios": "^0.26.1"
   }
 }
