@@ -1,0 +1,14 @@
+.btn {
+    width: 126px;
+    height: 27px;
+    top: 387px;
+    left: 25px;
+    border-radius: 20px;
+    padding: 0px, 12px, 0px, 12px;
+    font-size: 14px;
+    background: #FFFFFF;
+
+    &_not-active{
+    background: rgba(255, 255, 255, 0.5);;
+    }
+}
