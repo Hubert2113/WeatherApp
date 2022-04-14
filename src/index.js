@@ -1,6 +1,7 @@
 import './sass/main.scss';
 import _ from 'lodash';
 
+import "./partials-js/history_city"
 import { getCityWeather } from './partials-js/data_fetch';
 import { saveStorage, loadStorage, removeStorage } from './partials-js/storage';
 import { historyAddCity, historyCityVieve } from './partials-js/history_city';
