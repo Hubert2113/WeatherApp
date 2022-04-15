@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 });
 
-$searchInput.addEventListener("input", (ev) => {
-    $searchBtn.addEventListener("click", getCityWeather(ev));
+$searchInput.addEventListener("input", async (ev) => {
+    $searchBtn.addEventListener("click", await getCityWeather(ev));
 });
