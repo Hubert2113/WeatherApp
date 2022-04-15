@@ -4,8 +4,9 @@ import axios from "axios";
 const $citySearchField = document.querySelector("form input");
 const $citySearchBtn = document.querySelector("form button");
 
+let citiesData = [];
+
 export function getCityWeather(ev){
-    const citiesData = [];
     getCoordinates(ev)
     .then((response) => {
         for(const city of response){
@@ -24,5 +25,3 @@ export function getCityWeather(ev){
 function getCoordinates(ev){
     return axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${ev.target.value}&limit=1&appid=86882c431a5c1fa03f48939e3b313043`);
 }
-
-// $citySearchBtn.addEventListener("click", getCityWeather());
