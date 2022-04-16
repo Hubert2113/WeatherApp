@@ -1,8 +1,10 @@
 import { saveStorage, loadStorage, removeStorage } from './storage';
 
 export function historyAddCity(dane) {
-  const storageLength = localStorage.length;
-  saveStorage(storageLength, dane[0].name);
+  for (let index = 0; index < 3; index++) {
+    const storageLength = localStorage.length;
+    saveStorage(storageLength, dane[0].name);
+  }
 }
 
 export function historyCityVieve() {
@@ -12,9 +14,29 @@ export function historyCityVieve() {
     const element = loadStorage(index);
     arrayOfCity.push(element);
   }
+  GenerateViewHistory(arrayOfCity);
   return arrayOfCity;
 }
 
 export function HistoryCityDelete(index) {
   removeStorage(index);
+}
+
+function GenerateViewHistory(arrayOfCity) {
+  const $historySection = document.querySelector('.history');
+  console.log($historySection);
+  console.log('przekazane dene -> ' + arrayOfCity);
+
+  arrayOfCity.forEach((el) => {
+    const history = document.createElement('div');
+    history.classList.add('history_button');
+
+    const historyArray = `
+    <p class="info-item">
+      ${el}
+    </p>`;
+    history.innerHTML = historyArray;
+
+    $historySection.append(history);
+  });
 }

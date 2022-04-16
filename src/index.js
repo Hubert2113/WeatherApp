@@ -11,6 +11,6 @@ const dane = [
 ];
 historyAddCity(dane);
 console.log(historyCityVieve());
-HistoryCityDelete(0);
+// HistoryCityDelete(0);
 
 console.log(getCityWeather('Londyn'));
