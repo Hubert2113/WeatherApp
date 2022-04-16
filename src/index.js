@@ -1,18 +1,16 @@
 import './sass/main.scss';
 import _ from 'lodash';
 
-import "./partials-js/history_city"
+import { historyAddCity, historyCityVieve, HistoryCityDelete } from './partials-js/history_city';
 import { getCityWeather } from './partials-js/data_fetch';
-import { saveStorage, loadStorage, removeStorage } from './partials-js/storage';
-import { historyAddCity, historyCityVieve } from './partials-js/history_city';
 
-saveStorage('test', 'jakas nowa zmienna');
-const wartosc = loadStorage('test');
-console.log(wartosc);
+const dane = [
+  {
+    name: 'londyn',
+  },
+];
+historyAddCity(dane);
+console.log(historyCityVieve());
+HistoryCityDelete(0);
 
-console.log(localStorage.length);
-removeStorage('test');
-
-// console.log(historyCityVieve());
-
-// console.log(getCityWeather('Londyn'));
+console.log(getCityWeather('Londyn'));
