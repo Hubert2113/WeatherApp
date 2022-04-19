@@ -128,7 +128,11 @@ const testArray = {
     sunset: 1649877119,
   },
 };
-console.log(Object.values(testArray));
+// console.log(Object.values(testArray));
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+console.log(getKeyByValue(testArray, 'dt'));
 //create chart
 const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
 
@@ -139,7 +143,7 @@ const data = {
       label: 'My First dataset',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: [-5, 10, 5, 2, 20, 30, 45],
     },
   ],
 };
