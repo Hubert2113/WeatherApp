@@ -1,19 +1,30 @@
 import { saveStorage, loadStorage, removeStorage } from './storage';
 
 export function historyAddCity(dane) {
+  //petla tylko dla testów
   for (let index = 0; index < 3; index++) {
+    // let sumKontrol = true;
+    // let flaga = 0;
     const storageLength = localStorage.length;
-    saveStorage(storageLength, dane[0].name);
+    // while (sumKontrol)
+      // if (loadStorage(index + flaga) === undefined) {
+        saveStorage(storageLength, dane[0].name);
+        // sumKontrol = false;
+      // } else {
+        // flaga++;
+      // }
   }
 }
 
 export function historyCityVieve() {
+  //sprawdzenie długości local storage
   const storageLength = localStorage.length;
+
+  //tworzenie tablicy miast i ich indeksu
   const arrayOfCity = [];
-  
   for (let index = 0; index < storageLength; index++) {
     const element = loadStorage(index);
-      arrayOfCity[index] = [];
+    arrayOfCity[index] = [];
     for (let j = 0; j < 2; j++) {
       if (j === 0) {
         arrayOfCity[index][j] = index;
