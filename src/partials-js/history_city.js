@@ -27,6 +27,10 @@ function GenerateViewHistory(arrayOfCity) {
   console.log($historySection);
   console.log('przekazane dene -> ' + arrayOfCity);
 
+   const history_arrow = document.createElement('div');
+  history_arrow.classList.add('history_arrow arrow_left');
+  $historySection.append(history_arrow);
+
   arrayOfCity.forEach((el) => {
     const history = document.createElement('div');
     history.classList.add('history_button');
@@ -38,5 +42,9 @@ function GenerateViewHistory(arrayOfCity) {
     history.innerHTML = historyArray;
 
     $historySection.append(history);
+
+    const history_arrow2 = document.createElement('div');
+  history_arrow.classList.add('history_arrow arrow_rigth');
+  $historySection.append(history_arrow2);
   });
 }
