@@ -1,8 +1,8 @@
-"use strict"
-import axios from "axios";
+'use strict';
+import axios from 'axios';
 
-const $citySearchField = document.querySelector("form input");
-const $citySearchBtn = document.querySelector("form button");
+const $citySearchField = document.querySelector('form input');
+const $citySearchBtn = document.querySelector('form button');
 
 let citiesData = [];
 
@@ -16,10 +16,10 @@ export function getCityWeather(ev){
             });
         }
     })
-    .catch((error) => {
-        return error;
+    .catch(error => {
+      return error;
     });
-    return citiesData;
+  return citiesData;
 }
 
 function getCoordinates(ev){
