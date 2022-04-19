@@ -1,20 +1,12 @@
 import './sass/main.scss';
-
-import _ from 'lodash';
 import './partials-js/chart';
-import { historyAddCity, historyCityVieve, HistoryCityDelete } from './partials-js/history_city';
-import { getCityWeather } from './partials-js/data_fetch';
+import {getCityWeather, citiesData, getDefaultCityData} from './partials-js/data_fetch';
+import axios from 'axios';
 
-const dane = [
-  {
-    name: 'londyn',
-  },
-];
-historyAddCity(dane);
-console.log(historyCityVieve());
-// HistoryCityDelete(0);
+let defaultCity = [];
 
-console.log(getCityWeather('Londyn'));
+document.addEventListener("DOMContentLoaded", getDefaultCityData());
 
-
-
+$searchInput.addEventListener("input", async (ev) => {
+    $searchBtn.addEventListener("click", await getCityWeather(ev));
+});
