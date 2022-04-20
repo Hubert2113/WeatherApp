@@ -1,5 +1,5 @@
 import './sass/main.scss';
-// import './partials-js/chart';
+import './partials-js/chart';
 import {getCityWeather, citiesData, getDefaultCityData, getInputValue,
     defaultCity, inputValue} from './partials-js/data_fetch';
 import axios from 'axios';
