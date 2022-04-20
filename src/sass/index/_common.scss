@@ -1,0 +1,86 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+
+  padding: 0;
+  margin: 0;
+}
+
+p {
+
+  padding: 0;
+  margin: 0;
+}
+
+body {
+
+  position: fixed;
+  min-height: 100%;
+  min-width: 100%;
+  background-image: linear-gradient(0.56deg, #000000 -13.48%, rgba(0, 0, 0, 0) 78.75%), url("../images/bg-desktop.jpg");
+  background-attachment: fixed;
+  background-size: auto;
+}
+
+.section {
+
+  min-width: 100%; 
+}
+
+.container {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: $tablet) {
+
+    max-width: 280px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop){
+
+    max-width: 500px; 
+
+  }
+  @media screen and (min-width: $desktop) {
+
+    max-width: 1280px;
+  } 
+} 
+
+/*elementy tła */
+.bg-square {
+  
+  position: fixed;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  transform: rotate(-30deg);
+  width: 197.85px;
+  height: 197.85px;    
+  border-radius: 30px;
+
+&-left {
+  top: 151.37px;
+  left: -84px;
+}
+
+&-right {
+  top: -86.08px;
+  left: 995px;
+}
+}
+

@@ -1,0 +1,37 @@
+
+.days-btn {
+    
+    width: 126px;
+    height: 27px;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0px, 12px, 0px, 12px;
+    font-size: 14px;
+    background: $txt-color;
+    cursor: pointer;
+    
+    &_not-active{
+    background: $days-btn-not-active-color;;
+    }
+}
+
+.btn-container {
+
+@media screen and (max-width: 767px) {    
+
+    margin-top: 387px;
+    margin-left: 25px;
+}
+
+ @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    
+    margin-top: 599px;
+    margin-left: 249px;
+ }
+
+@media screen and (min-width: $desktop) {
+ 
+    margin-top: 580px;
+    margin-left: 900px;
+}
+}
