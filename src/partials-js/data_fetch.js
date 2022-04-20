@@ -1,11 +1,11 @@
 'use strict';
 import axios from 'axios';
-
 const $citySearchField = document.querySelector('form input');
 const $citySearchBtn = document.querySelector('form button');
 
-export let citiesData = [];
-export let defaultCity = [];
+export let dataCity;
+// export let citiesData = [];
+// export let defaultCity = [];
 // export let inputValue = null;
 
 // export function getInputValue(ev){
@@ -27,10 +27,10 @@ export function getCityWeather(ev) {
       }
     })
     .catch(error => {
-        return error;
+      return error;
     });
-    console.log(citiesData);
-    return citiesData;
+  console.log(citiesData);
+  return citiesData;
 }
 
 function getCoordinates(ev) {
@@ -39,16 +39,16 @@ function getCoordinates(ev) {
   );
 }
 
-export async function getDefaultCityData(defaultCity) {
+export async function getDefaultCityData() {
   await axios
     .get(
       'https://api.openweathermap.org/data/2.5/forecast?lat=52.2319581&lon=21.0067249&units=metric&appid=86882c431a5c1fa03f48939e3b313043',
     )
     .then(response => {
-      defaultCity.push(response.data);
-
+      dataCity = response.data;
     })
     .catch(error => {
+      console.log(error);
       return error;
     });
 }
