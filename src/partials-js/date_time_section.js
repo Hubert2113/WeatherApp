@@ -1,11 +1,19 @@
-import './sass/main.scss';
-import { getCityWeather } from './partials-js/data_fetch';
+// import './sass/main.scss';
+import {
+  getCityWeather,
+  citiesData,
+  getDefaultCityData,
+  getInputValue,
+  defaultCity,
+  inputValue,
+} from './partials-js/data_fetch';
+
 import moment from 'moment';
 
-const cityDateTag = document.querySelector('section.city-date');
+const cityDateTag = document.querySelector('div.date-container-bg');
 
-console.log(response.city.sunrise);
-console.log(response.city.sunset);
+//console.log(response.city.sunrise);
+//console.log(response.city.sunset);
 
 function shiftInSecondsConverter(secondsFromUTC, desiredFormat) {
   const timeInMinutes = secondsFromUTC / 60;
@@ -24,9 +32,9 @@ function unixTimeConverterHhMm(unixTime) {
   return formattedTime;
 }
 
-unixTimeConverterHhMm(response.city.sunrise);
+//unixTimeConverterHhMm(response.city.sunrise);
 
-function createGalleryTags(backendObjects, callback1, callback2) {
+export function createGalleryTags(backendObjects, callback1, callback2) {
   const markup = backendObjects
     .map(
       backendObj =>
@@ -48,4 +56,4 @@ function createGalleryTags(backendObjects, callback1, callback2) {
   cityDateTag.insertAdjacentHTML('beforeend', markup);
 }
 
-createGalleryTags(response, unixTimeConverterHhMm);
+createGalleryTags(defaultCity, unixTimeConverterHhMm, shiftInSecondsConverter);

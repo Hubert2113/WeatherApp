@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 import axios from 'axios';
 
 const $citySearchField = document.querySelector('form input');
