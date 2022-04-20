@@ -4,7 +4,14 @@ import axios from 'axios';
 const $citySearchField = document.querySelector('form input');
 const $citySearchBtn = document.querySelector('form button');
 
-let citiesData = [];
+export let citiesData = [];
+export let defaultCity = [];
+// export let inputValue = null;
+
+// export function getInputValue(ev){
+//     inputValue = ev.target.value;
+//     console.log(inputValue);
+// }
 
 export function getCityWeather(ev) {
   getCoordinates(ev)
@@ -20,9 +27,10 @@ export function getCityWeather(ev) {
       }
     })
     .catch(error => {
-      return error;
+        return error;
     });
-  return citiesData;
+    console.log(citiesData);
+    return citiesData;
 }
 
 function getCoordinates(ev) {
@@ -38,6 +46,7 @@ export async function getDefaultCityData(defaultCity) {
     )
     .then(response => {
       defaultCity.push(response.data);
+
     })
     .catch(error => {
       return error;
