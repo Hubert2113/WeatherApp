@@ -1,19 +1,27 @@
 import { saveStorage, loadStorage, removeStorage } from './storage';
+// import { defaultCity } from './data_fetch';
 
-export function historyAddCity(dane) {
-  //petla tylko dla testów
-  for (let index = 0; index < 3; index++) {
-    // let sumKontrol = true;
-    // let flaga = 0;
-    const storageLength = localStorage.length;
-    // while (sumKontrol)
-      // if (loadStorage(index + flaga) === undefined) {
-        saveStorage(storageLength, dane[0].name);
-        // sumKontrol = false;
-      // } else {
-        // flaga++;
-      // }
-  }
+// export function historyAddCity(dane) {
+//   //petla tylko dla testów
+//   for (let index = 0; index < 3; index++) {
+//     // let sumKontrol = true;
+//     // let flaga = 0;
+//     const storageLength = localStorage.length;
+//     // while (sumKontrol)
+//       // if (loadStorage(index + flaga) === undefined) {
+//         saveStorage(storageLength, dane[0].name);
+//         // sumKontrol = false;
+//       // } else {
+//         // flaga++;
+//       // }
+//   }
+// }
+
+export function historyAddCity(defaultCity) {
+  const storageLength = localStorage.length;
+  const dane = defaultCity[0];
+  console.log(dane);
+  saveStorage(dane.city.id, dane.city.name);
 }
 
 export function historyCityVieve() {
