@@ -30,8 +30,11 @@ body {
   min-width: 100%;
   background-image: linear-gradient(0.56deg, #000000 -13.48%, rgba(0, 0, 0, 0) 78.75%), url("../images/bg-desktop.jpg");
   background-attachment: fixed;
-  background-size: auto;
+  background-size: cover;
+  mix-blend-mode: multiply;
+  
 }
+
 
 .section {
 
@@ -48,17 +51,17 @@ body {
 
   @media screen and (max-width: $tablet) {
 
-    max-width: 280px;
+    width: 280px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $desktop){
 
-    max-width: 500px; 
+    width: 500px; 
 
   }
   @media screen and (min-width: $desktop) {
 
-    max-width: 1280px;
+    width: 1280px;
   } 
 } 
 
