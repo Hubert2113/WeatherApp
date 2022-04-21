@@ -5,11 +5,10 @@ const $citySearchField = document.querySelector('form input');
 const $citySearchBtn = document.querySelector('form button');
 
 export let cityData = null;
-export let defaultCity = [];
 export let inputValue = null;
 export let coordinates = {
-    lat: null,
-    lon: null,
+    lat: 52.2319581,
+    lon: 21.0067249,
 }
 export let defaultCoordinates = {
     lat: 52.2319581,
@@ -18,7 +17,6 @@ export let defaultCoordinates = {
 
 export function getInputValue(ev){
     inputValue = ev.target.value;
-    console.log(inputValue);
 }
 
 export function getCityWeather(inputValue){
@@ -30,7 +28,6 @@ export function getCityWeather(inputValue){
             axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${city.lon}&units=metric&appid=86882c431a5c1fa03f48939e3b313043`)
             .then((weatherData) => {
                 cityData = weatherData.data;
-                console.log(cityData);
                 return cityData;
             });
         }
@@ -47,8 +44,8 @@ function getCoordinates(inputValue){
 export async function getDefaultCityData(){
     await axios.get("https://api.openweathermap.org/data/2.5/forecast?lat=52.2319581&lon=21.0067249&units=metric&appid=86882c431a5c1fa03f48939e3b313043")
     .then((response) => {
-        defaultCity = response.data;
-        return defaultCity;
+        cityData = response.data;
+        return cityData;
     })
     .catch((error) => {
         return error;
