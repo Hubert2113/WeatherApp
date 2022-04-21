@@ -12,31 +12,36 @@
     cursor: pointer;
     
     &_not-active{
-    background: $days-btn-not-active-color;;
+        
+    background: $days-btn-not-active-color;
+    } 
+} 
+.days-btn_padding {
+
+        margin-left: 18px;
     }
-}
 
 .btn-container {
 
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 
 @media screen and (max-width: $tablet) {    
 
     margin-top: 387px;
-    margin-left: 25px;
 }
 
  @media screen and (min-width: $tablet) and (max-width: $desktop) {
     
     margin-top: 599px;
-    margin-left: 249px;
+
  }
 
 @media screen and (min-width: $desktop) {
  
     margin-top: 580px;
-    margin-left: 900px;
 }
 }
