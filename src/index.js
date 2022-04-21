@@ -1,7 +1,7 @@
 import './sass/main.scss';
-// import './partials-js/chart';
-import {getCityWeather, cityData, getDefaultCityData, getInputValue,
-    defaultCity, inputValue, coordinates, defaultCoordinates} from './partials-js/data_fetch';
+import './partials-js/chart';
+import {getCityWeather, citiesData, getDefaultCityData, getInputValue,
+    defaultCity, inputValue} from './partials-js/data_fetch';
 import axios from 'axios';
 
 const $searchInput = document.querySelector("input.search-bar");
