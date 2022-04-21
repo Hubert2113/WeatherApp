@@ -1,8 +1,9 @@
 import { saveStorage, loadStorage, removeStorage } from './storage';
+// import { } from "./data_fetch";
 
-export function historyAddCity(defaultCity) {
+export function historyAddCity(cityData) {
   const storageLength = localStorage.length;
-  const dane = defaultCity[0];
+  const dane = cityData;
   console.log(dane);
   saveStorage(dane.city.id, dane.city.name);
 }
