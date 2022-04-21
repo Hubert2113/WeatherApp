@@ -11,4 +11,4 @@ document.addEventListener("DOMContentLoaded", getDefaultCityData());
 
 // $searchInput.addEventListener("input", getInputValue(ev));
 // $submitBtn.addEventListener("click", await getCityWeather(ev));
-// console.log(defaultCity);
+console.log(defaultCity);
