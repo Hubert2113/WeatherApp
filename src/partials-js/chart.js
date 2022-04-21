@@ -8,7 +8,7 @@ const key = '86882c431a5c1fa03f48939e3b313043&units=metric';
 //DOM imports
 const ctx = document.getElementById('myChart');
 //Test Array
-const test = {
+const apiResponse = {
   lat: 57,
   lon: -2.15,
   timezone: 'Europe/London',
@@ -196,26 +196,47 @@ const test = {
     },
   ],
 };
-const testt = test.list;
-const dateTimestamp = test.daily.map(element => {
+const temp = apiResponse.daily.map(element => {
+  return element.temp.day;
+});
+console.log(temp);
+
+const dateTimestamp = apiResponse.daily.map(element => {
   return element.dt;
 });
-console.log(dateTimestamp);
-const pressure = test.daily.map(element => {
+
+const pressure = apiResponse.daily.map(element => {
   return element.pressure;
 });
-console.log(pressure);
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
+const labels = dateTimestamp;
 
 const data = {
   labels: labels,
   datasets: [
     {
-      label: 'Temperature',
-      backgroundColor: 'orange',
-      borderColor: 'orange',
-      data: [-5, 10, 5, 2, 20, 30, 45],
+      label: 'Temperature, C°',
+      backgroundColor: '#FF6B09',
+      borderColor: '#FF6B09',
+      data: temp,
+    },
+    {
+      label: 'Humidity, %',
+      backgroundColor: '#0906EB',
+      borderColor: '#0906EB',
+      data: pressure,
+    },
+    {
+      label: 'Wind Speed, m/s',
+      backgroundColor: '#EA9A05',
+      borderColor: '#EA9A05',
+      data: pressure,
+    },
+    {
+      label: 'Atmosphere Pressure, m/m',
+      backgroundColor: '#067806',
+      borderColor: '#067806',
+      data: pressure,
     },
   ],
 };
@@ -223,6 +244,10 @@ const data = {
 const config = {
   type: 'line',
   data: data,
-  options: {},
+  options: {
+    layout: {
+      padding: 20,
+    },
+  },
 };
 const myChart = new Chart(document.getElementById('myChart'), config);
