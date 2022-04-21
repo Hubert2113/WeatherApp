@@ -2,7 +2,7 @@ import './sass/main.scss';
 import './partials-js/chart';
 import './partials-js/weather';
 import {getCityWeather, citiesData, getDefaultCityData, getInputValue,
-    defaultCity, inputValue} from './partials-js/data_fetch';
+    defaultCity, inputValue,} from './partials-js/data_fetch';
 import axios from 'axios';
 import { historyAddCity } from './partials-js/history_city'
 
