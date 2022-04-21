@@ -1,5 +1,5 @@
 import './sass/main.scss';
-//import './partials-js/chart';
+import './partials-js/chart';
 import {getCityWeather, citiesData, getDefaultCityData, getInputValue,
     defaultCity, inputValue} from './partials-js/data_fetch';
 import axios from 'axios';
@@ -11,4 +11,4 @@ document.addEventListener("DOMContentLoaded", getDefaultCityData());
 
 // $searchInput.addEventListener("input", getInputValue(ev));
 // $submitBtn.addEventListener("click", await getCityWeather(ev));
-console.log(defaultCity);
+// console.log(defaultCity);
