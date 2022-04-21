@@ -4,7 +4,12 @@ import {getCityWeather, citiesData, getDefaultCityData, getInputValue,
     defaultCity, inputValue} from './partials-js/data_fetch';
 import axios from 'axios';
 
-import { createGalleryTags } from './partials-js/date_time_section';
+import {
+  createGalleryTags,
+  unixTimeConverterHhMm,
+  shiftInSecondsConverter,
+} from './partials-js/date_time_section';
+
 createGalleryTags(defaultCity, unixTimeConverterHhMm, shiftInSecondsConverter);
 
 const $searchInput = document.querySelector("input.search-bar");

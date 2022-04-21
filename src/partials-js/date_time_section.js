@@ -6,7 +6,7 @@ import {
   getInputValue,
   defaultCity,
   inputValue,
-} from './partials-js/data_fetch';
+} from './data_fetch';
 
 import moment from 'moment';
 
@@ -15,13 +15,13 @@ const cityDateTag = document.querySelector('div.date-container-bg');
 //console.log(response.city.sunrise);
 //console.log(response.city.sunset);
 
-function shiftInSecondsConverter(secondsFromUTC, desiredFormat) {
+export function shiftInSecondsConverter(secondsFromUTC, desiredFormat) {
   const timeInMinutes = secondsFromUTC / 60;
   const currTime = moment().utcOffset(timeInMinutes).format(`${desiredFormat}`);
   return currTime;
 }
 
-function unixTimeConverterHhMm(unixTime) {
+export function unixTimeConverterHhMm(unixTime) {
   let date = new Date(unixTime * 1000);
   let hours = date.getHours();
   let minutes = '0' + date.getMinutes();
