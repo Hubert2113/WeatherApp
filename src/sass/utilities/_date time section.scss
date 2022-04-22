@@ -2,13 +2,18 @@
     display: flex;
     flex-direction: column;
     background-color: $date-time-container-bg;
+    align-items: center;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    color: #FFFFFF;
         
     @media screen and (max-width: $tablet) {
         box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
         width: 280px;
         height: 190px;
-        left: 20px;
-        top: 166px;
         border-radius: 34px;
         
         margin-top: 36px;
@@ -18,8 +23,6 @@
         box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
         width: 500px;
         height: 278px;
-        left: 134px;
-        top: 258px;
         border-radius: 34px; 
         
         margin-top: 40px;
@@ -30,43 +33,104 @@
         box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
         width: 450px;
         height: 300px;
-        left: 830px;
-        top: 259px;
         border-radius: 34px 0px 0px 34px;
     }
 };
 
+
 .city-date {
-    &__day {
-        display: flex;
+    @media screen and (max-width: $tablet) {
+        &__day {
+            display: flex;
+            font-size: 45px;
+            line-height: 54px;
+            letter-spacing: 0.04em;
+
+            padding-top: 30px;
+            padding-bottom: 15px;
+        }
+
+        &__month-and-time {
+            display: flex;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.04em;
+
+            padding-bottom: 25px;
+        }
+        
+        &__sunrise-and-sunset {
+            display: flex;
+            display: flex;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.04em;
+
+            padding-bottom: 42px;
+        }
     }
 
-    &__month-and-time {
-        display: flex;
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        &__day {
+            display: flex;
+            font-size: 90px;
+            line-height: 108px;
+            letter-spacing: 0.04em;
+
+            padding-top: 60px;
+            padding-bottom: 10px;
+        }
+        
+        &__month-and-time {
+            display: flex;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.04em;
+
+            padding-bottom: 30px;
+        }
+        
+        &__sunrise-and-sunset {
+            display: flex;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.04em;
+
+            padding-bottom: 38px;
+        }
     }
 
-    &__sunrise-and-sunset {
-        display: flex;
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+
+        &__day {
+            display: flex;
+            font-size: 90px;
+            line-height: 108px;
+
+            padding-top: 60px;
+            padding-bottom: 10px;
+        }
+        
+        &__month-and-time {
+            display: flex;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.04em;
+        }
+        
+        &__sunrise-and-sunset {
+            display: flex;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.04em;
+        }
     }
-}
-
-@media screen and (max-width: $tablet) {
-.date-container-bg {
-    display: flex;
-    flex-direction: column;
-}
-}
-
-@media screen and (min-width: $tablet) and (max-width: $desktop) {
-.date-container-bg {
-    display: flex;
-    flex-direction: column;
-}
-}
-
-@media screen and (min-width: $desktop) {
-.date-container-bg {
-    display: flex;
-    flex-direction: column;
-}
+ 
 }

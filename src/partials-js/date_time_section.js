@@ -35,24 +35,25 @@ export function unixTimeConverterHhMm(unixTime) {
 //unixTimeConverterHhMm(response.city.sunrise);
 
 export function createDateTimeTags(backendObjects, callback1, callback2) {
-  const markup = /*backendObjects
+  const markup =
+    /*backendObjects
     .map(
       backendObj =>*/
-        `<div class = "city-date__day">
-            <p class = "">${callback1((backendObjects.city.timezone), 'Do ddd')}</p>
+    `<div class = "city-date__day">
+            <p class = "">${callback1(backendObjects.city.timezone, 'Do')}</p>
+            <p class = "">${callback1(backendObjects.city.timezone, 'ddd')}</p>
         </div>
         <div class = "city-date__month-and-time">
-            <p class = "">${callback1((backendObjects.city.timezone), 'MMMM')}</p>
-            <p class = "">${callback1((backendObjects.city.timezone), 'h:mm:ss')}</p>
+            <p class = "">${callback1(backendObjects.city.timezone, 'MMMM')}</p>
+            <p class = "">${callback1(backendObjects.city.timezone, 'h:mm:ss')}</p>
         </div>
         <div class = "city-date__sunrise-and-sunset">
             <p class = "">${callback2(backendObjects.city.sunrise)}</p>
             <p class = "">${callback2(backendObjects.city.sunset)}</p>
-        </div>`
+        </div>`;
     // ,)
     // .join('');
   cityDateTag.insertAdjacentHTML('beforeend', markup);
-  console.log(backendObjects.city.timezone);
 }
 
 // createDateTimeTags(cityData, shiftInSecondsConverter, unixTimeConverterHhMm);
