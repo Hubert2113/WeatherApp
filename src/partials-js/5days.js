@@ -3,6 +3,7 @@ import { arrayOfKey } from './history_city';
 
 export function GenerateView5Days() {
   const $5DaysSection = document.querySelector('.Days5');
+  $5DaysSection.classList.remove('Days5_hiden');
   //=====================kod na potencjalne strzałki==================
   // const $5days_arrow = document.createElement('div');
   // let $5days_arrowCode = `
@@ -15,7 +16,6 @@ export function GenerateView5Days() {
 
   arrayOfKey.forEach(el => {
     for (let index = 0; index < 33; index += 8) {
-      console.log(index);
       const Days5 = document.createElement('div');
       Days5.classList.add('Days5_viev');
       const days5Array = `
@@ -30,8 +30,8 @@ export function GenerateView5Days() {
     <p>max</p>
     </div>
     <div class="Days5_viev__tempValue">
-    <p>${loadStorage(el).list[index].main.temp_min} &deg</p>
-    <p>${loadStorage(el).list[index].main.temp_max} &deg</p>
+    <p>${Math.round(loadStorage(el).list[index].main.temp_min)} &deg</p>
+    <p>${Math.round(loadStorage(el).list[index].main.temp_max)} &deg</p>
     </div>`;
       Days5.innerHTML = days5Array;
       $5DaysSection.append(Days5);

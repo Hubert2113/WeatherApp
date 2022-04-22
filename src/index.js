@@ -25,6 +25,8 @@ const secondCity = {
 
 const $searchInput = document.querySelector('input.search-bar');
 const $submitBtn = document.querySelector('button.submit-btn');
+const $Days5Btn = document.querySelector('#Days5Btn');
+
 
 $searchInput.addEventListener('input', getInputValue);
 $submitBtn.addEventListener('click', async ev => {
@@ -32,8 +34,9 @@ $submitBtn.addEventListener('click', async ev => {
   await getCityWeather(inputValue);
 });
 
+$Days5Btn.addEventListener('click', GenerateView5Days);
+
 console.log(cityData);
 historyAddCity(cityData);
-// historyAddCity(secondCity);
 historyCityVieve();
-GenerateView5Days();
+// GenerateView5Days();
