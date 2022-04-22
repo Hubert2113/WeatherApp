@@ -1,6 +1,7 @@
 import { loadStorage } from './storage';
 import { arrayOfKey } from './history_city';
 
+
 export function GenerateView5Days() {
   const $5DaysSection = document.querySelector('.Days5');
   $5DaysSection.classList.remove('Days5_hiden');
@@ -14,6 +15,9 @@ export function GenerateView5Days() {
   // $5DaysSection.append($5days_arrow);
   //=====================kod na potencjalne strzałki==================
 
+    // <img src="./images/${loadStorage(el).list[index].weather[0].icon}.png" alt="ikona" />;
+
+
   arrayOfKey.forEach(el => {
     for (let index = 0; index < 33; index += 8) {
       const Days5 = document.createElement('div');
@@ -22,8 +26,7 @@ export function GenerateView5Days() {
       <div class="Days5_viev__week">
     <p>${loadStorage(el).list[index].dt_txt}</p>
     </div>
-    <div class="Days5_viev__icon">
-    <p>icon->${loadStorage(el).list[index].weather[0].icon}</p>
+    <div class="Days5_viev__icon${loadStorage(el).list[index].weather[0].icon}">
     </div>
     <div class="Days5_viev__temp">
     <p>min</p>

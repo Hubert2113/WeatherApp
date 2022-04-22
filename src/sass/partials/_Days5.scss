@@ -52,8 +52,62 @@
     &__week {
       color: rgba(255, 255, 255, 1);
     }
+    &__icon01n {
+      background-image: url('../images/01d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon02n {
+      background-image: url('../images/02d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon03n {
+      background-image: url('../images/03d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon04n {
+      background-image: url('../images/04d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon09n {
+      background-image: url('../images/09d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon10n {
+      background-image: url('../images/10d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon11n {
+      background-image: url('../images/11d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon13n {
+      background-image: url('../images/13d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon50n {
+      background-image: url('../images/50d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
   }
-  &_hiden{
-      visibility: hidden;
+  &_hiden {
+    visibility: hidden;
   }
 }
