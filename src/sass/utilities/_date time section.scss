@@ -1,9 +1,42 @@
-.city-date {
-    &__container {
-        display: flex;
-        flex-direction: column;
+.date-container-bg{
+    display: flex;
+    flex-direction: column;
+    background-color: $date-time-container-bg;
+        
+    @media screen and (max-width: $tablet) {
+        box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
+        width: 280px;
+        height: 190px;
+        left: 20px;
+        top: 166px;
+        border-radius: 34px;
+        
+        margin-top: 36px;
     }
+            
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
+        width: 500px;
+        height: 278px;
+        left: 134px;
+        top: 258px;
+        border-radius: 34px; 
+        
+        margin-top: 40px;
+    }
+        
+    @media screen and (min-width: $desktop) {
+        
+        box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
+        width: 450px;
+        height: 300px;
+        left: 830px;
+        top: 259px;
+        border-radius: 34px 0px 0px 34px;
+    }
+};
 
+.city-date {
     &__day {
         display: flex;
     }
@@ -15,4 +48,25 @@
     &__sunrise-and-sunset {
         display: flex;
     }
+}
+
+@media screen and (max-width: $tablet) {
+.date-container-bg {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+.date-container-bg {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+@media screen and (min-width: $desktop) {
+.date-container-bg {
+    display: flex;
+    flex-direction: column;
+}
 }

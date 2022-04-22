@@ -1,17 +1,17 @@
 import './sass/main.scss';
-import './partials-js/chart';
-import './partials-js/weather';
+import moment from 'moment';
+// import './partials-js/chart';
+// import './partials-js/weather';
 import {getCityWeather, getDefaultCityData, getInputValue,
     inputValue, cityData} from './partials-js/data_fetch';
 import axios from 'axios';
 
 import {
-  createGalleryTags,
+  createDateTimeTags,
   unixTimeConverterHhMm,
   shiftInSecondsConverter,
 } from './partials-js/date_time_section';
 
-createGalleryTags(defaultCity, unixTimeConverterHhMm, shiftInSecondsConverter);
 
 const $searchInput = document.querySelector("input.search-bar");
 const $submitBtn = document.querySelector("button.submit-btn");
@@ -25,3 +25,5 @@ $submitBtn.addEventListener("click", async (ev) => {
 });
 
 console.log(cityData);
+
+createDateTimeTags(cityData, shiftInSecondsConverter, unixTimeConverterHhMm);
