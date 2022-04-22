@@ -19,19 +19,19 @@ export function GenerateView5Days() {
       const Days5 = document.createElement('div');
       Days5.classList.add('Days5_viev');
       const days5Array = `
-      <div>
+      <div class="Days5_viev__week">
     <p>${loadStorage(el).list[index].dt_txt}</p>
     </div>
-    <div>
+    <div class="Days5_viev__icon">
     <p>icon->${loadStorage(el).list[index].weather[0].icon}</p>
     </div>
-    <div>
+    <div class="Days5_viev__temp">
     <p>min</p>
-    <p>${loadStorage(el).list[index].main.temp_min} - stopni</p>
-    </div>
-    <div>
     <p>max</p>
-    <p>${loadStorage(el).list[index].main.temp_max} - stopni</p>
+    </div>
+    <div class="Days5_viev__tempValue">
+    <p>${loadStorage(el).list[index].main.temp_min} &deg</p>
+    <p>${loadStorage(el).list[index].main.temp_max} &deg</p>
     </div>`;
       Days5.innerHTML = days5Array;
       $5DaysSection.append(Days5);
