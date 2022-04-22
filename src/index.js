@@ -1,5 +1,5 @@
 import './sass/main.scss';
-import './partials-js/chart';
+// import './partials-js/chart';
 import './partials-js/weather';
 import {
   getCityWeather,
@@ -10,6 +10,7 @@ import {
 } from './partials-js/data_fetch';
 import axios from 'axios';
 import { historyAddCity, HistoryCityDelete, historyCityVieve } from './partials-js/history_city';
+import { GenerateView5Days } from './partials-js/5days';
 
 const secondCity = {
   city: {
@@ -24,6 +25,8 @@ const secondCity = {
 
 const $searchInput = document.querySelector('input.search-bar');
 const $submitBtn = document.querySelector('button.submit-btn');
+const $Days5Btn = document.querySelector('#Days5Btn');
+
 
 $searchInput.addEventListener('input', getInputValue);
 $submitBtn.addEventListener('click', async ev => {
@@ -31,8 +34,9 @@ $submitBtn.addEventListener('click', async ev => {
   await getCityWeather(inputValue);
 });
 
+$Days5Btn.addEventListener('click', GenerateView5Days);
+
 console.log(cityData);
 historyAddCity(cityData);
-historyAddCity(secondCity);
 historyCityVieve();
-
+// GenerateView5Days();

@@ -1,0 +1,113 @@
+.Days5 {
+  display: flex;
+  background: rgba(16, 33, 54, 0.8);
+  box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
+  border-radius: 34px;
+  padding: 40px 50px;
+
+  @media screen and (max-width: $tablet) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    width: 620px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1060px;
+  }
+
+  &_viev {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10px;
+    &__temp {
+      display: flex;
+      flex-direction: row;
+      p {
+        margin: 0 15px;
+        line-height: 22px;
+        color: #ffffff;
+        opacity: 0.55;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 200;
+        font-size: 18px;
+      }
+    }
+    &__tempValue {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 30px;
+      color: #ff6b09;
+      display: flex;
+      flex-direction: row;
+      p {
+        margin: 0 15px;
+      }
+    }
+    &__week {
+      color: rgba(255, 255, 255, 1);
+    }
+    &__icon01n {
+      background-image: url('../images/01d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon02n {
+      background-image: url('../images/02d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon03n {
+      background-image: url('../images/03d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon04n {
+      background-image: url('../images/04d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon09n {
+      background-image: url('../images/09d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon10n {
+      background-image: url('../images/10d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon11n {
+      background-image: url('../images/11d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon13n {
+      background-image: url('../images/13d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+    &__icon50n {
+      background-image: url('../images/50d.png');
+      min-height: 70px;
+      min-width: 70px;
+      background-size: cover;
+    }
+  }
+  &_hiden {
+    visibility: hidden;
+  }
+}
