@@ -10,37 +10,42 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./sass/main.css"/>
+    <link rel="stylesheet" href="./sass/main.css" />
   </head>
   <body>
-    <section class="section "> 
-    <!--elementy tła-->
-      <div class="bg-square bg-square-left">
-      </div>
-      <div class="bg-square bg-square-right">
-      </div>
+    <section class="section">
+      <!--elementy tła-->
+      <div class="bg-square bg-square-left"></div>
+      <div class="bg-square bg-square-right"></div>
     </section>
     <!--treść strony-->
-    <section class="section"> 
+    <section class="section">
       <div class="container">
         <form>
-            <input class="search-bar" type="text" name="city-name" placeholder="Enter the city" />
-            <button class="submit-btn" type="submit"></button>
+          <input class="search-bar" type="text" name="city-name" placeholder="Enter the city" />
+          <button class="submit-btn" type="submit"></button>
         </form>
+        <include src="./partials/history.html"></include>
+
         <div class="weather-container">
           <!-- <include src=""></include>  -->
         </div>
         <div class="btn-container">
-            <button type="button" class="days-btn">TODAY</button>
-            <button id="5DaysBtn" type="button" class="days-btn days-btn_not-active days-btn_padding">5 DAYS</button>
+          <button type="button" class="days-btn">TODAY</button>
+          <button id="Days5Btn" type="button" class="days-btn days-btn_not-active days-btn_padding">
+            5 DAYS
+          </button>
         </div>
         <div class="date-container-bg">
           <!-- <include src=""></include> -->
         </div>
-      </div>        
-      <div class="quote-container">    
-        <img class="quotation-marks" src="./images/“.svg"/>      
-        <p class="quote-txt">Who cares about the clouds when we're together? Just sing a song and bring the sunny weather.</p>
+      </div>
+      <div class="quote-container">
+        <img class="quotation-marks" src="./images/“.svg" />
+        <p class="quote-txt">
+          Who cares about the clouds when we're together? Just sing a song and bring the sunny
+          weather.
+        </p>
         <p class="quote-author">Dale Evans</p>
       </div>
       <div class="5-days">
@@ -50,9 +55,9 @@
         <!-- <include src=""></include> -->
       </div>
     </section>
-    <!-- <include src="./partials/history.html"></include>
 
-    <include src="./partials/chart.html"></include> -->
+    <!-- <include src="./partials/chart.html"></include> -->
+    -->
     <script src="./index.js"></script>
   </body>
 </html>
