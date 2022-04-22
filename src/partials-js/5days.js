@@ -1,7 +1,6 @@
 import { loadStorage } from './storage';
 import { arrayOfKey } from './history_city';
 
-
 export function GenerateView5Days() {
   const $5DaysSection = document.querySelector('.Days5');
   $5DaysSection.classList.remove('Days5_hiden');
@@ -14,9 +13,6 @@ export function GenerateView5Days() {
   // $5days_arrow.innerHTML = $5days_arrowCode;
   // $5DaysSection.append($5days_arrow);
   //=====================kod na potencjalne strzałki==================
-
-    // <img src="./images/${loadStorage(el).list[index].weather[0].icon}.png" alt="ikona" />;
-
 
   arrayOfKey.forEach(el => {
     for (let index = 0; index < 33; index += 8) {
