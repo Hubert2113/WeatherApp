@@ -11,11 +11,22 @@ export function GenerateView5Days() {
       for (let index = 0; index < 33; index += 8) {
         const Days5 = document.createElement('div');
         Days5.classList.add('Days5_viev');
+        let data = new Date(loadStorage(el).list[index].dt_txt);
+        let dataWeek = data.toLocaleDateString('en-us', {
+          weekday: 'long',
+        });
+        let dataDay = data.toLocaleDateString('en-us', {
+          month: 'short',
+          day: 'numeric',
+        });
         const days5Array = `
       <div class="Days5_viev__week">
-    <p>${loadStorage(el).list[index].dt_txt}</p>
+    <p>${dataWeek}</p>
     </div>
-    <div class="Days5_viev__icon${loadStorage(el).list[index].weather[0].icon}">
+    <div class="Days5_viev__day">
+    <p>${dataDay}</p>
+    </div>
+    <div class="Days5_viev__icon Days5_viev__icon${loadStorage(el).list[index].weather[0].icon}">
     </div>
     <div class="Days5_viev__temp">
     <p>min</p>
