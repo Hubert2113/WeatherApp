@@ -1,0 +1,39 @@
+.weather-container {
+
+    background-color: $section-bg;
+    position: absolute;
+
+    @media screen and (max-width: $tablet) {
+        
+        box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);   
+        width: 280px;
+        height: 190px;
+        left: 20px;
+        top: 166px;
+        border-radius: 34px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+
+        box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);  
+        width: 500px;
+        height: 300px;
+        left: 134px;
+        top: 258px;        
+        border-radius: 34px;
+
+    }
+
+    @media screen and (min-width: $desktop) {
+
+        box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);  
+        width: 450px;
+        height: 300px;
+        left: 830px;
+        top: 259px;
+        border-radius: 34px 0px 0px 34px;  
+    }
+
+
+
+}
