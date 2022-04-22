@@ -1,5 +1,5 @@
 import './sass/main.scss';
-import './partials-js/chart';
+// import './partials-js/chart';
 import './partials-js/weather';
 import {
   getCityWeather,
@@ -10,6 +10,7 @@ import {
 } from './partials-js/data_fetch';
 import axios from 'axios';
 import { historyAddCity, HistoryCityDelete, historyCityVieve } from './partials-js/history_city';
+import { GenerateView5Days } from './partials-js/5days';
 
 const secondCity = {
   city: {
@@ -35,4 +36,4 @@ console.log(cityData);
 historyAddCity(cityData);
 historyAddCity(secondCity);
 historyCityVieve();
-
+GenerateView5Days();

@@ -1,6 +1,10 @@
 import { saveStorage, loadStorage, removeStorage } from './storage';
 // import { } from "./data_fetch";
 
+
+export const arrayOfKey = [];
+
+
 export function historyAddCity(cityData) {
   saveStorage(cityData.city.id, cityData);
 }
@@ -8,7 +12,7 @@ export function historyAddCity(cityData) {
 export function historyCityVieve() {
   //sprawdzenie długości local storage
   const storageLength = localStorage.length;
-  const arrayOfKey = [];
+  // const arrayOfKey = [];
   for (let index = 0; index < storageLength; index++) {
     arrayOfKey.push(window.localStorage.key(index));
   }
