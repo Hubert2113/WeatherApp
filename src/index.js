@@ -34,6 +34,6 @@ $submitBtn.addEventListener('click', async ev => {
 
 console.log(cityData);
 historyAddCity(cityData);
-historyAddCity(secondCity);
+// historyAddCity(secondCity);
 historyCityVieve();
 GenerateView5Days();
