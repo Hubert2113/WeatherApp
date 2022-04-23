@@ -9,9 +9,19 @@ import {
   // cityData,
 } from './partials-js/data_fetch';
 import axios from 'axios';
+import { historyAddCity, HistoryCityDelete, historyCityVieve } from './partials-js/history_city';
+import { GenerateView5Days } from './partials-js/5days';
 
-const $searchInput = document.querySelector("input.search-bar");
-const $submitBtn = document.querySelector("button.submit-btn");
+const secondCity = {
+  city: {
+    id: 2643743,
+    name: 'London',
+    coord: {
+      lat: 51.5073,
+      lon: -0.1277,
+    },
+  },
+};
 
 export let cityData = JSON.parse(localStorage.getItem("cityData"));
 
