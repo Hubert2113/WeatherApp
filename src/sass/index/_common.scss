@@ -20,14 +20,13 @@ p {
 }
 
 body {
-  position: fixed;
+  position: absolute;
   min-height: 100%;
   min-width: 100%;
-  background-attachment: fixed;
   mix-blend-mode: multiply;
 }
 
-.bacgraund {
+.background {
   background: linear-gradient(0.56deg, #000000 -13.48%, rgba(0, 0, 0, 0) 78.75%),
     url('../images/bg-desktop.jpg');
   background-size: cover;
@@ -35,6 +34,12 @@ body {
 
 .section {
   min-width: 100%;
+}
+
+
+.section-not-active{
+
+  visibility: hidden;
 }
 
 .container {
