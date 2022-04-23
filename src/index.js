@@ -7,7 +7,8 @@ import {getCityWeather, getDefaultCityData, getInputValue,
 import axios from 'axios';
 
 import {
-  createDateTimeTags,
+  createHTMLMarkup,
+  timer,
   unixTimeConverterHhMm,
   shiftInSecondsConverter,
 } from './partials-js/date_time_section';
@@ -26,4 +27,5 @@ $submitBtn.addEventListener("click", async (ev) => {
 
 console.log(cityData);
 
-createDateTimeTags(cityData, shiftInSecondsConverter, unixTimeConverterHhMm);
+createHTMLMarkup(cityData);
+setInterval(() => timer(cityData), 1000);

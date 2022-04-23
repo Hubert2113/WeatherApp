@@ -12,6 +12,7 @@ import moment from 'moment';
 
 const cityDateTag = document.querySelector('div.date-container-bg');
 
+
 //console.log(response.city.sunrise);
 //console.log(response.city.sunset);
 
@@ -34,26 +35,58 @@ export function unixTimeConverterHhMm(unixTime) {
 
 //unixTimeConverterHhMm(response.city.sunrise);
 
-export function createDateTimeTags(backendObjects, callback1, callback2) {
+export function createHTMLMarkup(backendObjects) {
   const markup =
     /*backendObjects
     .map(
       backendObj =>*/
     `<div class = "city-date__day">
-            <p class = "">${callback1(backendObjects.city.timezone, 'Do')}</p>
-            <p class = "">${callback1(backendObjects.city.timezone, 'ddd')}</p>
+            <p class = "city-date__day-left-elem">${shiftInSecondsConverter(
+              backendObjects.city.timezone,
+              'Do',
+            ).slice(0, 2)}
+            <sup>${shiftInSecondsConverter(backendObjects.city.timezone, 'Do').slice(2, 4)}</sup>
+            </p>
+            <p "city-date__day-right-elem">${shiftInSecondsConverter(
+              backendObjects.city.timezone,
+              'ddd',
+            )}</p>
         </div>
-        <div class = "city-date__month-and-time">
-            <p class = "">${callback1(backendObjects.city.timezone, 'MMMM')}</p>
-            <p class = "">${callback1(backendObjects.city.timezone, 'h:mm:ss')}</p>
-        </div>
-        <div class = "city-date__sunrise-and-sunset">
-            <p class = "">${callback2(backendObjects.city.sunrise)}</p>
-            <p class = "">${callback2(backendObjects.city.sunset)}</p>
-        </div>`;
+        <div class = "city-date__month-time-sunset-sunrise">
+          <div class = "city-date__month-and-time">
+            <p class = "city-date__month-and-time-left-elem">${shiftInSecondsConverter(
+              backendObjects.city.timezone,
+              'MMMM',
+            )}</p>
+            <p id="secClock" class = "city-date__month-and-time-right-elem">${shiftInSecondsConverter(
+              backendObjects.city.timezone,
+              'h:mm:ss',
+            )}</p>
+          </div>
+          <div class = "city-date__sunrise-and-sunset">
+            <svg class="sunrise-svg" width="20" height="20">
+              <use href="images/sprite.svg#icon-sunrise"></use>
+            </svg>
+            <p class = "city-date__sunrise-and-sunset-left-elem">${unixTimeConverterHhMm(
+              backendObjects.city.sunrise,
+            )}</p>
+            <svg class="sunset-svg" width="20" height="20">
+              <use href="images/sprite.svg#icon-sunset"></use>
+            </svg>
+            <p>${unixTimeConverterHhMm(backendObjects.city.sunset)}</p>
+          </div>
+        </div>  `;
     // ,)
     // .join('');
   cityDateTag.insertAdjacentHTML('beforeend', markup);
 }
 
-// createDateTimeTags(cityData, shiftInSecondsConverter, unixTimeConverterHhMm);
+export function timer(backendObjects) {
+document.querySelector('p#secClock').textContent = shiftInSecondsConverter(
+  backendObjects.city.timezone,
+  'h:mm:ss',
+);
+}
+
+//createHTMLMarkup(cityData);
+//setInterval(() => timer(cityData), 1000);

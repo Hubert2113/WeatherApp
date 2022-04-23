@@ -7,8 +7,11 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
-    text-align: center;
+    //text-align: center;
     color: #FFFFFF;
+
+    position: relative;
+    margin: 0 auto;
         
     @media screen and (max-width: $tablet) {
         box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
@@ -29,7 +32,7 @@
     }
         
     @media screen and (min-width: $desktop) {
-        
+        flex-wrap: wrap;
         box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
         width: 450px;
         height: 300px;
@@ -40,6 +43,12 @@
 
 .city-date {
     @media screen and (max-width: $tablet) {
+        &__month-time-sunset-sunrise{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         &__day {
             display: flex;
             font-size: 45px;
@@ -50,16 +59,47 @@
             padding-bottom: 15px;
         }
 
+        &__day-left-elem{
+            padding-right: 10px;
+        }
+        &__day-right-elem {
+            padding-left: 10px;
+        }
+
         &__month-and-time {
             display: flex;
+            justify-content: center;
+            align-items: center;
             font-weight: 400;
             font-size: 14px;
             line-height: 17px;
             letter-spacing: 0.04em;
 
             padding-bottom: 25px;
+            //margin: 0 auto;
         }
-        
+        &__month-and-time-left-elem {
+            padding-right: 10px;
+            margin: 0 auto;
+            // &:after{
+            //     content: '';
+            //     position: absolute;
+            //     width: 1px;
+            //     height: 22px;
+            //     left: 140px;
+            //     top: 96px;
+                
+            //     opacity: 0.4;
+            //     border: 1px solid #FFFFFF;
+            // }
+        }
+        &__month-and-time-right-elem{
+            padding-left: 10px;
+            display: flex;
+            justify-content: center;
+            //margin: 0 auto;
+        }
+
         &__sunrise-and-sunset {
             display: flex;
             display: flex;
@@ -70,9 +110,19 @@
 
             padding-bottom: 42px;
         }
+
+        &__sunrise-and-sunset-left-elem{
+            padding-right: 50px;
+        }
     }
 
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        &__month-time-sunset-sunrise {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         &__day {
             display: flex;
             font-size: 90px;
@@ -82,7 +132,11 @@
             padding-top: 60px;
             padding-bottom: 10px;
         }
-        
+
+        &__day-left-elem {
+            padding-right: 40px;
+        }
+
         &__month-and-time {
             display: flex;
             font-weight: 400;
@@ -93,6 +147,11 @@
             padding-bottom: 30px;
         }
         
+        &__month-and-time-left-elem {
+            margin-right: 40px;
+            position: relative;
+        }    
+
         &__sunrise-and-sunset {
             display: flex;
             font-weight: 400;
@@ -102,10 +161,19 @@
 
             padding-bottom: 38px;
         }
+
+        &__sunrise-and-sunset-left-elem {
+            padding-right: 70px;
+        }
     }
 
     @media screen and (min-width: $desktop) {
-        flex-direction: row;
+        &__month-time-sunset-sunrise {
+            display: flex;
+            flex-direction: row;
+            text-align: left;
+            justify-content: space-between;
+        }
 
         &__day {
             display: flex;
@@ -113,15 +181,23 @@
             line-height: 108px;
 
             padding-top: 60px;
-            padding-bottom: 10px;
+            padding-bottom: 10px;;
         }
-        
+
+        &__day-left-elem {
+            padding-right: 50px;
+        }
+
         &__month-and-time {
             display: flex;
             font-weight: 400;
             font-size: 18px;
             line-height: 22px;
             letter-spacing: 0.04em;
+        }
+
+        &__month-and-time-left-elem{
+            padding-right: 40px;
         }
         
         &__sunrise-and-sunset {
@@ -131,6 +207,16 @@
             line-height: 22px;
             letter-spacing: 0.04em;
         }
+
+        &__sunrise-and-sunset-left-elem{
+            padding-right: 40px;
+            padding-left: 40px;
+        }
     }
  
+}
+
+.sunrise-svg,
+.sunset-svg{
+    fill: orangered;
 }
