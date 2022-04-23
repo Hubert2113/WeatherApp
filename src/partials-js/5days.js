@@ -35,6 +35,9 @@ export function GenerateView5Days() {
     <div class="Days5_viev__tempValue">
     <p>${Math.round(loadStorage(el).list[index].main.temp_min)} &deg</p>
     <p>${Math.round(loadStorage(el).list[index].main.temp_max)} &deg</p>
+    </div>
+    <div class="Days5_viev__moreInfo">
+    <a href="${el}">more info</a>
     </div>`;
         Days5.innerHTML = days5Array;
         $5DaysSection.append(Days5);
