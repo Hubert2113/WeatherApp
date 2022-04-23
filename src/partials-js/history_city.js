@@ -1,19 +1,13 @@
+import { cityData } from '..';
 import { saveStorage, loadStorage, removeStorage } from './storage';
 
-export function historyAddCity(dane) {
-  //petla tylko dla testów
-  for (let index = 0; index < 3; index++) {
-    // let sumKontrol = true;
-    // let flaga = 0;
-    const storageLength = localStorage.length;
-    // while (sumKontrol)
-      // if (loadStorage(index + flaga) === undefined) {
-        saveStorage(storageLength, dane[0].name);
-        // sumKontrol = false;
-      // } else {
-        // flaga++;
-      // }
-  }
+
+export const arrayOfKey = [];
+
+
+
+export function historyAddCity(cityData) {
+  saveStorage(cityData.city.id, cityData);
 }
 
 export function historyCityVieve() {
