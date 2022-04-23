@@ -50,13 +50,13 @@ export async function getDefaultCityData() {
       'https://api.openweathermap.org/data/2.5/forecast?lat=52.2319581&lon=21.0067249&units=metric&appid=86882c431a5c1fa03f48939e3b313043',
     )
     .then(response => {
-      historyAddCity(response.data);
+      pushDataToLocalStorage(response.data);
     })
     .catch(error => {
       console.error(error);
       return error;
     });
 }
-export function historyAddCity(cityData) {
+export function pushDataToLocalStorage(cityData) {
   saveStorage("cityData", cityData);
 }

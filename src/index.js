@@ -6,11 +6,11 @@ import {
   getDefaultCityData,
   getInputValue,
   inputValue,
-  // cityData,
 } from './partials-js/data_fetch';
 import axios from 'axios';
 import { historyAddCity, HistoryCityDelete, historyCityVieve } from './partials-js/history_city';
 import { GenerateView5Days } from './partials-js/5days';
+import { loadStorage } from './partials-js/storage';
 
 const secondCity = {
   city: {
@@ -23,7 +23,7 @@ const secondCity = {
   },
 };
 
-export let cityData = JSON.parse(localStorage.getItem("cityData"));
+export let cityData = loadStorage("cityData");
 
 const $searchInput = document.querySelector('input.search-bar');
 const $submitBtn = document.querySelector('button.submit-btn');
@@ -40,7 +40,7 @@ $submitBtn.addEventListener('click', async ev => {
 $Days5Btn.addEventListener('click', GenerateView5Days);
 
 // historyAddCity(cityData);
-historyCityVieve();
-GenerateView5Days();
+// historyCityVieve();
+// GenerateView5Days();
 
 console.log(cityData);
