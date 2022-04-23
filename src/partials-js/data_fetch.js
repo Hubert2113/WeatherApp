@@ -1500,6 +1500,10 @@ export let coordinates = {
     lon: 21.0067249,
 }
 
+export function getInputValue(ev){
+  inputValue = ev.target.value;
+}
+
 export function getCityWeather(inputValue) {
   getCoordinates(inputValue)
     .then(response => {
