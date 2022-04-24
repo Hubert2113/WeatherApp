@@ -1,47 +1,38 @@
-
 .days-btn {
-    
-    width: 126px;
-    height: 27px;
-    border-radius: 20px;
-    border-style: none;
-    padding: 0px, 12px, 0px, 12px;
-    font-family: 'Lato';
-    font-size: 14px;
-    background: $txt-color;
-    cursor: pointer;
-    
-    &_not-active{
-        
-    background: $days-btn-not-active-color;
-    } 
-} 
-.days-btn_padding {
+  width: 126px;
+  height: 27px;
+  border-radius: 20px;
+  border-style: none;
+  padding: 0px 12px 0px 12px;
+  font-family: 'Lato';
+  font-size: 14px;
+  background: $txt-color;
+  cursor: pointer;
 
-        margin-left: 18px;
-    }
+  &_not-active {
+    background: $days-btn-not-active-color;
+  }
+}
+.days-btn_padding {
+  margin-left: 18px;
+}
 
 .btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-
-@media screen and (max-width: $tablet) {    
-
+  @media screen and (max-width: $tablet) {
     margin-top: 387px;
-}
+  }
 
- @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
     margin-top: 599px;
+  }
 
- }
-
-@media screen and (min-width: $desktop) {
- 
+  @media screen and (min-width: $desktop) {
     margin-top: 580px;
-}
+  }
 }
