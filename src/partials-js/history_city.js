@@ -56,6 +56,6 @@ function GenerateViewHistory(arrayOfKey, reload) {
   if (reload === 1) {
     setTimeout(() => {
       location.reload();
-    }, 200);
+    }, 500);
   }
 }
