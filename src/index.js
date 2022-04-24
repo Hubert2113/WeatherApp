@@ -21,20 +21,6 @@ import {
   shiftInSecondsConverter,
 } from './partials-js/date_time_section';
 
-
-const $searchInput = document.querySelector("input.search-bar");
-const $submitBtn = document.querySelector("button.submit-btn");
-const secondCity = {
-  city: {
-    id: 2643743,
-    name: 'London',
-    coord: {
-      lat: 51.5073,
-      lon: -0.1277,
-    },
-  },
-};
-
 export let cityData = loadStorage("cityData");
 
 const $searchInput = document.querySelector('input.search-bar');
