@@ -1,6 +1,5 @@
 // 'use strict';
 import axios from 'axios';
-import { cityData } from '../index';
 import { saveStorage } from './storage';
 
 const $citySearchField = document.querySelector('form input');
@@ -33,7 +32,7 @@ export function getCityWeather(inputValue) {
       }
     })
     .catch(error => {
-      return error;
+      return console.log(error);
     });
 }
 
@@ -56,6 +55,6 @@ export async function getDefaultCityData() {
       return error;
     });
 }
-export function pushDataToLocalStorage(cityData) {
+function pushDataToLocalStorage(cityData) {
   saveStorage('cityData', cityData);
 }

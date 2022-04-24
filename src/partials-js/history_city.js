@@ -22,7 +22,7 @@ export function HistoryCityDelete(index) {
   removeStorage(index);
 }
 
-function GenerateViewHistory(arrayOfKey , reload) {
+function GenerateViewHistory(arrayOfKey, reload) {
   const historySection = document.querySelector('.history');
 
   const history_arrow = document.createElement('div');
@@ -53,8 +53,9 @@ function GenerateViewHistory(arrayOfKey , reload) {
     </button>`;
   history_arrow2.innerHTML = historyArowCode;
   historySection.append(history_arrow2);
-  if (reload === 1)
-  {
-    location.reload();
+  if (reload === 1) {
+    setTimeout(() => {
+      location.reload();
+    }, 200);
   }
 }
