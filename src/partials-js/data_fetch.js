@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 import axios from 'axios';
 import { cityData } from '../index';
 import {saveStorage} from "./storage";
