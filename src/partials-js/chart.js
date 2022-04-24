@@ -9,7 +9,7 @@ const apiKey = '86882c431a5c1fa03f48939e3b313043&units=metric';
 // https://api.openweathermap.org/data/2.5/forecast?lat=57&lon=-2.15&cnt=5&appid=86882c431a5c1fa03f48939e3b313043&units=metric
 // https://api.openweathermap.org/data/2.5/onecall?lat=57&lon=-2.15&exclude=daily&appid=86882c431a5c1fa03f48939e3b313043&units=metric
 //DOM imports
-const ctx = document.getElementById('myChart');
+const ctx = document.querySelector('#myChart');
 //Axios get function
 async function getDailyWeather(coordinates, apiKey) {
   await axios
@@ -21,7 +21,7 @@ async function getDailyWeather(coordinates, apiKey) {
       return apiResponse;
     })
     .catch(error => {
-      return error;
+      return console.log(error);
     });
 }
 //Api response
