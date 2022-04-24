@@ -650,6 +650,10 @@ body {
   color: #fff;
 }
 
+.history_button_delete {
+  margin-left: 4px;
+}
+
 .history_unvisable {
   visibility: hidden;
 }
