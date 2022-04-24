@@ -7,11 +7,23 @@ import {
   getInputValue,
   inputValue,
 } from './partials-js/data_fetch';
+
+import moment from 'moment';
 import axios from 'axios';
 import { historyAddCity, HistoryCityDelete, historyCityVieve } from './partials-js/history_city';
 import { GenerateView5Days } from './partials-js/5days';
 import { loadStorage } from './partials-js/storage';
 
+import {
+  createHTMLMarkup,
+  timer,
+  unixTimeConverterHhMm,
+  shiftInSecondsConverter,
+} from './partials-js/date_time_section';
+
+
+const $searchInput = document.querySelector("input.search-bar");
+const $submitBtn = document.querySelector("button.submit-btn");
 const secondCity = {
   city: {
     id: 2643743,
@@ -37,6 +49,10 @@ $submitBtn.addEventListener('click', async ev => {
   await getCityWeather(inputValue);
 });
 
+console.log(cityData);
+
+createHTMLMarkup(cityData);
+setInterval(() => timer(cityData), 1000);
 $Days5Btn.addEventListener('click', GenerateView5Days);
 
 // historyAddCity(cityData);
