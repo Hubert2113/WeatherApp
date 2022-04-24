@@ -21,9 +21,8 @@ import {
   shiftInSecondsConverter,
 } from './partials-js/date_time_section';
 
-
-const $searchInput = document.querySelector("input.search-bar");
-const $submitBtn = document.querySelector("button.submit-btn");
+const $searchInput = document.querySelector('input.search-bar');
+const $submitBtn = document.querySelector('button.submit-btn');
 const secondCity = {
   city: {
     id: 2643743,
@@ -35,13 +34,10 @@ const secondCity = {
   },
 };
 
-export let cityData = loadStorage("cityData");
-
-const $searchInput = document.querySelector('input.search-bar');
-const $submitBtn = document.querySelector('button.submit-btn');
+export let cityData = loadStorage('cityData');
 const $Days5Btn = document.querySelector('#Days5Btn');
 
-document.addEventListener("DOMContentLoaded", getDefaultCityData);
+document.addEventListener('DOMContentLoaded', getDefaultCityData);
 
 $searchInput.addEventListener('input', getInputValue);
 $submitBtn.addEventListener('click', async ev => {
