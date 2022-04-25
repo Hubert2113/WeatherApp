@@ -1,6 +1,4 @@
-// import { cityData } from '..';
 import { saveStorage, loadStorage, removeStorage } from './storage';
-// import { } from "./data_fetch";
 
 export const arrayOfKey = [];
 
