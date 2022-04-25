@@ -34,7 +34,6 @@ $Days1Btn.addEventListener('click', Day5Hiden);
 historyCityVieve(0);
 
 const todayBtn = document.querySelector("#todayBtn");
-const Days5Btn = document.querySelector("#Days5Btn");
 // dodanie event listenerów
 
 document.addEventListener("DOMContentLoaded", getDefaultCityData);
@@ -60,7 +59,7 @@ createHTMLMarkup(cityData);
 setInterval(() => timer(cityData), 1000);
 $Days5Btn.addEventListener('click', GenerateView5Days);
 todayBtn.addEventListener('click', setTodayAsActive);
-Days5Btn.addEventListener('click', set5DaysAsActive);
+$Days5Btn.addEventListener('click', set5DaysAsActive);
 // historyAddCity(cityData);
 // historyCityVieve();
 // GenerateView5Days();
