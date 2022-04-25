@@ -5,12 +5,12 @@ export function Day5Hiden() {
   const $5DaysSection = document.querySelector('.Days5');
   const $5DaysCityNAme = document.querySelector('.Day5CityName');
   const $Today = document.querySelector('.weather-container');
-  const $Timer = document.querySelector('.date-container-bg');
+  // const $Timer = document.querySelector('.date-container-bg');
 
   $5DaysSection.classList.add('Days5_hiden');
   $5DaysCityNAme.classList.add('Days5_hiden');
   $Today.classList.remove('Days5_hiden');
-  $Timer.classList.remove('Days5_hiden');
+  // $Timer.classList.remove('Days5_hiden');
 
   while ($5DaysSection.firstChild) {
     $5DaysSection.removeChild($5DaysSection.firstChild);
@@ -26,7 +26,7 @@ export function GenerateView5Days() {
   const $5DaysSection = document.querySelector('.Days5');
   const $5DaysCityNAme = document.querySelector('.Day5CityName');
   const $Today = document.querySelector('.weather-container');
-  const $Timer = document.querySelector('.date-container-bg');
+  // const $Timer = document.querySelector('.date-container-bg');
 
   const $vievIsDone = document.querySelector('.Days5_viev');
 
@@ -34,7 +34,7 @@ export function GenerateView5Days() {
     $5DaysSection.classList.remove('Days5_hiden');
     $5DaysCityNAme.classList.remove('Days5_hiden');
     $Today.classList.add('Days5_hiden');
-    $Timer.classList.add('Days5_hiden');
+    // $Timer.classList.add('Days5_hiden');
   }
 
   if (!$vievIsDone) {
