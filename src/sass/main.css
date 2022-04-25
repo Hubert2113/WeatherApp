@@ -243,12 +243,17 @@
   fill: orangered;
 }
 
+.not-active {
+  opacity: 0.5;
+}
+
 .days-btn {
   width: 126px;
   height: 27px;
   border-radius: 20px;
   border-style: none;
   padding: 0px 12px 0px 12px;
+  background: #FFFFFF;
   font-family: 'Lato';
   font-size: 14px;
   cursor: pointer;
@@ -538,7 +543,7 @@ body {
 }
 
 .background {
-  background: linear-gradient(0.56deg, #000000 -13.48%, transparent 78.75%), url("../images/bg-desktop.jpg");
+  background: linear-gradient(0.56deg, #000000 -13.48%, rgba(0, 0, 0, 0) 78.75%), url("../images/bg-desktop.jpg");
   background-size: cover;
 }
 
@@ -658,7 +663,8 @@ body {
 }
 
 .history_button_delete {
-  margin-left: 4px;
+  margin-left: 10px;
+  color: #fff;
 }
 
 .history_unvisable {

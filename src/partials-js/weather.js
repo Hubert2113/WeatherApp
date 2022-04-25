@@ -1,24 +1,13 @@
-import { loadStorage } from './storage';
-import { arrayOfKey } from './history_city';
 import { cityData } from '../index';
-import {
-    getCityWeather,
-    citiesData,
-    getDefaultCityData,
-    getInputValue,
-    defaultCity,
-    inputValue,
-  } from './data_fetch';
-//const APIkey = d178afedb1e548b1bf806b5c28441db3;
 
+export function mainWeather() {
+  const city_name = cityData.city.name;
+  const current_temp = cityData.list[0].main.temp;
+  const min_temp = cityData.list[0].main.temp_min;
+  const max_temp = cityData.list[0].main.temp_max;
 
-const city_name = cityData.name;
-const current_temp = cityData.main.temp;
-const min_temp = cityData.main.temp_min;
-const max_temp = cityData.main.temp_max;
-
-const today_section = `
-      <div class="section-active weather-container">
+  const $todaySection = document.querySelector('.weather-container');
+  const today_section = `
     <p>${city_name}</p>
     <p>${Math.round(current_temp)}&deg</p>
     <div class="today_temp_txt">
@@ -28,6 +17,6 @@ const today_section = `
     <div class="today_temp_value">
     <p>${Math.round(min_temp)} &deg</p>
     <p>${Math.round(max_temp)} &deg</p>
-    </div>`;
-    const $todaySection = document.querySelector('.weather-container');
-    $todaySection.innerHTML = today_section;
+    `;
+  $todaySection.innerHTML = today_section;
+}
