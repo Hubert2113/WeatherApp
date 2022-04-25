@@ -1,4 +1,3 @@
-import { loadStorage } from './storage';
 import { cityData } from '../index';
 
 export function Day5Hiden() {
