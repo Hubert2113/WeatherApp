@@ -41,7 +41,8 @@ function GenerateViewHistory(arrayOfKey, reload) {
     historyArray = `
     <a class="history_button_link" href="${el}">
       ${loadStorage(el).city.name}
-    </a>`;
+    </a>
+    <a class="history_button_delete" href="${el}">X</a>`;
     history.innerHTML = historyArray;
 
     historySection.append(history);
@@ -53,6 +54,7 @@ function GenerateViewHistory(arrayOfKey, reload) {
     </button>`;
   history_arrow2.innerHTML = historyArowCode;
   historySection.append(history_arrow2);
+
   if (reload === 1) {
     setTimeout(() => {
       location.reload();
