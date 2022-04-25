@@ -1,7 +1,6 @@
 // 'use strict';
 import axios from 'axios';
-import { cityData } from '../index';
-import {saveStorage} from "./storage";
+import { saveStorage } from './storage';
 
 const $citySearchField = document.querySelector('form input');
 const $citySearchBtn = document.querySelector('form button');
@@ -9,11 +8,11 @@ const $citySearchBtn = document.querySelector('form button');
 // export let cityData = localStorage.getItem(756135);
 export let inputValue = null;
 export let coordinates = {
-    lat: 52.2319581,
-    lon: 21.0067249,
-}
+  lat: 52.2319581,
+  lon: 21.0067249,
+};
 
-export function getInputValue(ev){
+export function getInputValue(ev) {
   inputValue = ev.target.value;
 }
 
@@ -28,13 +27,12 @@ export function getCityWeather(inputValue) {
             `https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${city.lon}&units=metric&appid=86882c431a5c1fa03f48939e3b313043`,
           )
           .then(weatherData => {
-            cityData = weatherData.data;
-            return cityData;
+            pushDataToLocalStorage(weatherData.data);
           });
       }
     })
     .catch(error => {
-      return error;
+      return console.log(error);
     });
 }
 
@@ -57,6 +55,6 @@ export async function getDefaultCityData() {
       return error;
     });
 }
-export function pushDataToLocalStorage(cityData) {
-  saveStorage("cityData", cityData);
+function pushDataToLocalStorage(cityData) {
+  saveStorage('cityData', cityData);
 }
