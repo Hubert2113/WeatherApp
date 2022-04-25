@@ -45,14 +45,14 @@ body {
   margin-right: auto;
 
   @media screen and (max-width: $tablet) {
-    width: 280px;
+    width: 315px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    width: 500px;
+    width: 760px;
   }
   @media screen and (min-width: $desktop) {
-    width: 1280px;
+    width: 1275px;
   }
 }
 

@@ -1,5 +1,5 @@
 import './sass/main.scss';
-import './partials-js/chart';
+// import './partials-js/chart';
 import './partials-js/weather';
 import {
   getCityWeather,

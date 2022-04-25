@@ -1,10 +1,254 @@
 @charset "UTF-8";
+.date-container-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(16, 33, 54, 0.8);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  color: #FFFFFF;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .date-container-bg {
+    -webkit-box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
+            box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
+    width: 280px;
+    height: 190px;
+    border-radius: 34px;
+    margin-top: 36px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .date-container-bg {
+    -webkit-box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
+            box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
+    width: 500px;
+    height: 278px;
+    border-radius: 34px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .date-container-bg {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
+            box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
+    width: 450px;
+    height: 300px;
+    border-radius: 34px 0px 0px 34px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .city-date__month-time-sunset-sunrise {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .city-date__day {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 45px;
+    line-height: 54px;
+    letter-spacing: 0.04em;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  .city-date__day-left-elem {
+    padding-right: 10px;
+  }
+  .city-date__day-right-elem {
+    padding-left: 10px;
+  }
+  .city-date__month-and-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    padding-bottom: 25px;
+  }
+  .city-date__month-and-time-left-elem {
+    padding-right: 10px;
+    margin: 0 auto;
+  }
+  .city-date__month-and-time-right-elem {
+    padding-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .city-date__sunrise-and-sunset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    padding-bottom: 42px;
+  }
+  .city-date__sunrise-and-sunset-left-elem {
+    padding-right: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .city-date__month-time-sunset-sunrise {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .city-date__day {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 90px;
+    line-height: 108px;
+    letter-spacing: 0.04em;
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
+  .city-date__day-left-elem {
+    padding-right: 40px;
+  }
+  .city-date__month-and-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    padding-bottom: 30px;
+  }
+  .city-date__month-and-time-left-elem {
+    margin-right: 40px;
+    position: relative;
+  }
+  .city-date__sunrise-and-sunset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    padding-bottom: 38px;
+  }
+  .city-date__sunrise-and-sunset-left-elem {
+    padding-right: 70px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .city-date__month-time-sunset-sunrise {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .city-date__day {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 90px;
+    line-height: 108px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
+  .city-date__day-left-elem {
+    padding-right: 50px;
+  }
+  .city-date__month-and-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+  }
+  .city-date__month-and-time-left-elem {
+    padding-right: 40px;
+  }
+  .city-date__sunrise-and-sunset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+  }
+  .city-date__sunrise-and-sunset-left-elem {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.sunrise-svg,
+.sunset-svg {
+  fill: orangered;
+}
+
 .days-btn {
   width: 126px;
   height: 27px;
   border-radius: 20px;
   border-style: none;
-  padding: 0px, 12px, 0px, 12px;
+  padding: 0px 12px 0px 12px;
   font-family: 'Lato';
   font-size: 14px;
   background: #FFFFFF;
@@ -316,19 +560,19 @@ body {
 
 @media screen and (max-width: 768px) {
   .container {
-    width: 280px;
+    width: 315px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .container {
-    width: 500px;
+    width: 760px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
-    width: 1280px;
+    width: 1275px;
   }
 }
 
@@ -359,39 +603,29 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  margin-top: 150px;
 }
 
 @media screen and (max-width: 768px) {
   .history {
-    top: 95px;
-    left: 15px;
+    margin-top: 90px;
     font-size: 12px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .history {
-    top: 120px;
-    left: 130px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .history {
-    top: 135px;
-    left: 375px;
+    margin-top: 120px;
   }
 }
 
@@ -414,6 +648,10 @@ body {
 
 .history_button_link {
   color: #fff;
+}
+
+.history_button_delete {
+  margin-left: 4px;
 }
 
 .history_unvisable {
@@ -439,6 +677,7 @@ body {
   -webkit-box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
           box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
   border-radius: 34px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -734,6 +973,25 @@ body {
 
 .Days5_hiden {
   visibility: hidden;
+  margin: 0;
+}
+
+.Day5CityName {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 22px auto;
 }
 
 .chart {
