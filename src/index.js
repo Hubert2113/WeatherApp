@@ -10,14 +10,14 @@ import {
 import moment from 'moment';
 import axios from 'axios';
 import { historyAddCity, HistoryCityDelete, historyCityVieve } from './partials-js/history_city';
-import { GenerateView5Days, Day5Hiden } from './partials-js/5days';
+import { GenerateView5Days, Day5Hiden, } from './partials-js/5days';
 import { loadStorage } from './partials-js/storage';
-import {
-  createHTMLMarkup,
-  timer,
-  unixTimeConverterHhMm,
-  shiftInSecondsConverter,
-} from './partials-js/date_time_section';
+// import {
+//   createHTMLMarkup,
+//   timer,
+//   unixTimeConverterHhMm,
+//   shiftInSecondsConverter,
+// } from './partials-js/date_time_section';
 
 export let cityData = loadStorage('cityData');
 
@@ -49,5 +49,5 @@ if (!loadStorage('cityData')) {
   }, 500);
 }
 
-createHTMLMarkup(cityData);
-setInterval(() => timer(cityData), 1000);
+// createHTMLMarkup(cityData);
+// setInterval(() => timer(cityData), 1000);
