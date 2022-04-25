@@ -5,9 +5,6 @@ import format from 'date-fns/format';
 import { coordinates } from './data_fetch';
 //API Key
 const apiKey = '86882c431a5c1fa03f48939e3b313043&units=metric';
-// https://api.openweathermap.org/data/2.5/forecast/daily?q=London&cnt=3&appid=86882c431a5c1fa03f48939e3b313043&units=metric
-// https://api.openweathermap.org/data/2.5/forecast?lat=57&lon=-2.15&cnt=5&appid=86882c431a5c1fa03f48939e3b313043&units=metric
-// https://api.openweathermap.org/data/2.5/onecall?lat=57&lon=-2.15&exclude=daily&appid=86882c431a5c1fa03f48939e3b313043&units=metric
 //DOM imports
 const ctx = document.querySelector('#myChart');
 //Axios get function
@@ -272,3 +269,10 @@ const config = {
   },
 };
 const myChart = new Chart(document.getElementById('myChart'), config);
+
+//Funcion showing chart
+function showChart() {
+  const btnShow = document.querySelector('.chart-btn__show');
+  btnShow.classList.add('show');
+  btnShow.classList.remove('hidden');
+}
