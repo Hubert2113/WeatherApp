@@ -1,5 +1,5 @@
 import './sass/main.scss';
-import './partials-js/chart';
+// import './partials-js/chart';
 import './partials-js/weather';
 import {
   getCityWeather,
@@ -48,6 +48,6 @@ if (!loadStorage('cityData')) {
     location.reload();
   }, 500);
 }
-
+console.log(cityData);
 createHTMLMarkup(cityData);
 setInterval(() => timer(cityData), 1000);
