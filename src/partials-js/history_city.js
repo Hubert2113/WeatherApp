@@ -45,7 +45,7 @@ function GenerateViewHistory(arrayOfKey, reload) {
     <a class="history_button_delete" href="${el}">X</a>`;
     history.innerHTML = historyArray;
 
-    http: historySection.append(history);
+    historySection.append(history);
   });
   const history_arrow2 = document.createElement('div');
   historyArowCode = `
