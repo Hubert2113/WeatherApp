@@ -1,42 +1,33 @@
-// import { loadStorage } from './storage';
-// import { arrayOfKey } from './history_city';
+import { loadStorage } from './storage';
+import { arrayOfKey } from './history_city';
+import { cityData } from '../index';
+import {
+    getCityWeather,
+    citiesData,
+    getDefaultCityData,
+    getInputValue,
+    defaultCity,
+    inputValue,
+  } from './data_fetch';
+//const APIkey = d178afedb1e548b1bf806b5c28441db3;
 
-// //const body = document.body;
-// //const daysBtn = document.querySelector('#Days5Btn');
-// //const changeBg = () => {
-//   //document.body.style.backgroundImage = "url('../images/bg-5days.jpg')";
-// //};
-// //daysBtn.addEventListener('click', changeBg);
 
+const city_name = cityData.name;
+const current_temp = cityData.main.temp;
+const min_temp = cityData.main.temp_min;
+const max_temp = cityData.main.temp_max;
 
-
-// export function GenerateTodayView() {
-//   const $todaySection = document.querySelector('.weather-container');
-//   const $not_active = document.querySelector('.section-not-active');
-
-//   if (!$not_active) {
-//     $todaySection.classList.remove('section-not-active');
-//     arrayOfKey.forEach(el => {
-//       for (let index = 0; index < 33; index += 1) {
-//         const today = document.createElement('div');
-//         today.classList.add('today_view');
-//         let date = new Date(loadStorage(el).list[index].dt_txt);
-//         let dateToday = date.toLocaleDateString('en-us', {
-//           month: 'short',
-//           day: 'numeric',
-//         });
-
-// const todayWeather = `
-// <div class="today_view__day">
-// <p>${dateToday}</p>
-// </div>
-// <div class="today_view__icon today_view__icon${loadStorage(el).list[index].weather[0].icon}">
-// </div>
-// <div class="today_view__temp">
-// <p>min</p>
-// <p>max</p>
-// </div>
-// <div class="today_view__tempValue">
-// <p>${Math.round(loadStorage(el).list[index].main.temp_min)} &deg</p>
-// <p>${Math.round(loadStorage(el).list[index].main.temp_max)} &deg</p>
-// </div>`}})}}
+const today_section = `
+      <div class="section-active weather-container">
+    <p>${city_name}</p>
+    <p>${Math.round(current_temp)}&deg</p>
+    <div class="today_temp_txt">
+    <p>min</p>
+    <p>max</p>
+    </div>
+    <div class="today_temp_value">
+    <p>${Math.round(min_temp)} &deg</p>
+    <p>${Math.round(max_temp)} &deg</p>
+    </div>`;
+    const $todaySection = document.querySelector('.weather-container');
+    $todaySection.innerHTML = today_section;

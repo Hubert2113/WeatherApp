@@ -63,7 +63,7 @@ body {
 
 /*elementy tła */
 .bg-square {
-  position: fixed;
+  position: absolute;
   border: 4px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   transform: rotate(-30deg);

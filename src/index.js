@@ -1,7 +1,5 @@
 import './sass/main.scss';
 import './partials-js/chart';
-import './partials-js/weather';
-import './partials-js/weather_buttons';
 import {
   getCityWeather,
   getDefaultCityData,
@@ -19,8 +17,11 @@ import {
   unixTimeConverterHhMm,
   shiftInSecondsConverter,
 } from './partials-js/date_time_section';
+import {setTodayAsActive, set5DaysAsActive} from './partials-js/weather_buttons';
 
 export let cityData = loadStorage('cityData');
+
+// definicje przycisków 
 
 const $searchInput = document.querySelector('input.search-bar');
 const $submitBtn = document.querySelector('button.submit-btn');
@@ -32,6 +33,11 @@ $Days1Btn.addEventListener('click', Day5Hiden);
 
 historyCityVieve(0);
 
+const todayBtn = document.querySelector("#todayBtn");
+const Days5Btn = document.querySelector("#Days5Btn");
+// dodanie event listenerów
+
+document.addEventListener("DOMContentLoaded", getDefaultCityData);
 $searchInput.addEventListener('input', getInputValue);
 $submitBtn.addEventListener('click', async ev => {
   ev.preventDefault();
@@ -52,3 +58,12 @@ if (!loadStorage('cityData')) {
 
 createHTMLMarkup(cityData);
 setInterval(() => timer(cityData), 1000);
+$Days5Btn.addEventListener('click', GenerateView5Days);
+todayBtn.addEventListener('click', setTodayAsActive);
+Days5Btn.addEventListener('click', set5DaysAsActive);
+// historyAddCity(cityData);
+// historyCityVieve();
+// GenerateView5Days();
+
+console.log(cityData);
+

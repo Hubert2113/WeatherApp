@@ -1,18 +1,20 @@
+
+.not-active {
+  opacity: 0.5;
+}
+
 .days-btn {
   width: 126px;
   height: 27px;
   border-radius: 20px;
   border-style: none;
-  padding: 0px 12px 0px 12px;
+  padding: 0px 12px 0px 12px;   
+  background: $txt-color;
   font-family: 'Lato';
   font-size: 14px;
-  background: $txt-color;
   cursor: pointer;
-
-  &_not-active {
-    background: $days-btn-not-active-color;
-  }
 }
+
 .days-btn_padding {
   margin-left: 18px;
 }
