@@ -4,6 +4,7 @@
   background: rgba(16, 33, 54, 0.8);
   box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
   border-radius: 34px;
+  margin: 0 auto;
 
   @media screen and (max-width: $tablet) {
     width: 280px;
@@ -215,5 +216,19 @@
   }
   &_hiden {
     visibility: hidden;
+    margin: 0;
   }
+}
+.Day5CityName {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 22px auto;
 }
