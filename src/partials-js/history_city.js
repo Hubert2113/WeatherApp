@@ -62,13 +62,12 @@ function GenerateViewHistory(arrayOfKey, reload) {
       historySection.append(history);
     });
     const $deleteButtons = document.querySelectorAll('.history_button_delete');
+    // dodawanie event do kazdego przycisku w histori
     for (let i = 0; i < $deleteButtons.length; i++) {
       $deleteButtons[i].addEventListener('click', ev => {
         ev.preventDefault();
-        console.log('addevent - ' + i);
-        console.log(ev);
         let element = ev.path[0].attributes[1].nodeValue;
-        console.log(element);
+        // sprawdzenie czy nie usuniesz cityData
         if (element !== 'cityData') {
           HistoryCityDelete(element);
           location.reload();
