@@ -19,7 +19,7 @@
     />
   </head>
   <body>
-    <div class="bacgraund">
+    <div class="background">
       <section class="section">
         <!--elementy tła-->
         <div class="bg-square bg-square-left"></div>
@@ -30,19 +30,24 @@
         <div class="container">
           <form>
             <input class="search-bar" type="text" name="city-name" placeholder="Enter the city" />
-            <button class="submit-btn" type="submit"></button>
+            <button class="submit-btn" type="submit">></button>
           </form>
           <include src="./partials/history.html"></include>
 
-          <div class="weather-container">
+          <div class=".section-active weather-container" id="todaySection">
             <!-- <include src=""></include>  -->
           </div>
-          <div class="btn-container">
-            <button id="Days1Btn" type="button" class="days-btn">TODAY</button>
+          <div class="btn-container" id="weather-buttons-container">
+            <button 
+            id="today-btn"
+            type="button" 
+            class="days-btn active">
+            TODAY
+          </button>
             <button
               id="Days5Btn"
               type="button"
-              class="days-btn days-btn_not-active days-btn_padding"
+              class=" days-btn not-active days-btn_padding"
             >
               5 DAYS
             </button>
