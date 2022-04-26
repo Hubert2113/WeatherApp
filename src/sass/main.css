@@ -716,7 +716,7 @@ body {
 }
 
 .background {
-  background: linear-gradient(0.56deg, #000000 -13.48%, transparent 78.75%), url("../images/bg-desktop.jpg");
+  background: linear-gradient(0.56deg, #000000 -13.48%, rgba(0, 0, 0, 0) 78.75%), url("../images/bg-desktop.jpg");
   background-size: cover;
 }
 
@@ -882,6 +882,29 @@ body {
           box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
   border-radius: 34px;
   margin: 0 auto;
+  overflow: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.Days5 ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.Days5 ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.Days5 ::-webkit-scrollbar-thumb {
+  background: #ff6b09;
+  border-radius: 50%;
+}
+
+.Days5 ::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 @media screen and (max-width: 768px) {
