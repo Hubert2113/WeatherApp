@@ -1,3 +1,16 @@
+.Day5CityName {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 22px auto;
+}
 .Days5 {
   display: flex;
   justify-content: space-between;
@@ -217,18 +230,7 @@
   &_hiden {
     visibility: hidden;
     margin: 0;
+    display: none;
   }
 }
-.Day5CityName {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 34px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  margin: 22px auto;
-}
+

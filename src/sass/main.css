@@ -608,7 +608,7 @@ body {
 
 .bg-square-right {
   top: -86.08px;
-  left: 995px;
+  right: -84px;
 }
 
 .history {
@@ -677,6 +677,24 @@ body {
   height: 28px;
   background: rgba(255, 255, 255, 0.2);
   border: none;
+}
+
+.Day5CityName {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 22px auto;
 }
 
 .Days5 {
@@ -987,24 +1005,7 @@ body {
 .Days5_hiden {
   visibility: hidden;
   margin: 0;
-}
-
-.Day5CityName {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 34px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  margin: 22px auto;
+  display: none;
 }
 
 .chart {

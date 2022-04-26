@@ -1,4 +1,3 @@
-import { loadStorage } from './storage';
 import { cityData } from '../index';
 
 export function Day5Hiden() {
@@ -76,23 +75,4 @@ export function GenerateView5Days() {
       $5DaysSection.append(Days5);
     }
   }
-  //=====================kod na potencjalne strzałki==================
-  // const $5days_arrow = document.createElement('div');
-  // let $5days_arrowCode = `
-  //   <button class="5Days_arrow">
-  //     <
-  //   </button>`;
-  // $5days_arrow.innerHTML = $5days_arrowCode;
-  // $5DaysSection.append($5days_arrow);
-  //=====================kod na potencjalne strzałki==================
-
-  //=====================kod na potencjalne strzałki==================
-  // const $5days_arrow2 = document.createElement('div');
-  // let $5days_arrowCode2 = `
-  //   <button class="5Days_arrow">
-  //     <
-  //   </button>`;
-  // $5days_arrow2.innerHTML = $5days_arrowCode2;
-  // $5DaysSection.append($5days_arrow2);
-  //=====================kod na potencjalne strzałki==================
 }
