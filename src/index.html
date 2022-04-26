@@ -35,19 +35,11 @@
           <include src="./partials/history.html"></include>
 
           <div class=".section-active weather-container" id="todaySection">
+            <!-- <include src=""></include>  -->
           </div>
           <div class="btn-container" id="weather-buttons-container">
-            <button
-            id="today-btn"
-            type="button"
-            class="days-btn active">
-            TODAY
-          </button>
-            <button
-              id="Days5Btn"
-              type="button"
-              class=" days-btn not-active days-btn_padding"
-            >
+            <button id="today-btn" type="button" class="days-btn active">TODAY</button>
+            <button id="Days5Btn" type="button" class="days-btn not-active days-btn_padding">
               5 DAYS
             </button>
           </div>
@@ -65,13 +57,16 @@
           </p>
           <p class="quote-author">Dale Evans</p>
         </div>
-        <!-- <div class="chart"> -->
-          <!-- <canvas id="myChart"></canvas> -->
-          <!-- <include src=""></include> -->
+      </section>
+      <section class="container">
+        <div class="chart">
+          <button class="chart-btn__show">Show Chart</button>
+          <button class="chart-btn__close hidden">Close Chart</button>
+          <canvas id="myChart" class="hidden"></canvas>
+          <!-- <include src="./partials/chart.html"></include> -->
         </div>
       </section>
 
-      <!-- <include src="./partials/chart.html"></include> -->
       <script src="./index.js"></script>
     </div>
   </body>

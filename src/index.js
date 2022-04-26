@@ -1,5 +1,5 @@
 import './sass/main.scss';
-// import './partials-js/chart';
+import { getDailyWeather, showChart, closeChart } from './partials-js/chart';
 import { mainWeather } from './partials-js/weather';
 import {
   getCityWeather,
@@ -21,6 +21,8 @@ const $submitBtn = document.querySelector('button.submit-btn');
 const $Days5Btn = document.querySelector('#Days5Btn');
 const $Days1Btn = document.querySelector('#today-btn');
 const todayBtn = document.querySelector('#today-btn');
+const $btnShow = document.querySelector('.chart-btn__show');
+const $btnClose = document.querySelector('.chart-btn__close');
 // definicje przycisków
 
 // dodawanie zdarzen
@@ -36,6 +38,8 @@ $submitBtn.addEventListener('click', async ev => {
 $Days5Btn.addEventListener('click', GenerateView5Days);
 todayBtn.addEventListener('click', setTodayAsActive);
 $Days5Btn.addEventListener('click', set5DaysAsActive);
+$btnShow.addEventListener('click', showChart);
+$btnClose.addEventListener('click', closeChart);
 // dodawanie zdarzen
 
 // podstawowe ładowanie danych
