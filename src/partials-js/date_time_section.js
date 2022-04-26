@@ -64,15 +64,13 @@ export function createHTMLMarkup(backendObjects) {
             )}</p>
           </div>
           <div class = "city-date__sunrise-and-sunset">
-            <svg class="sunrise-svg" width="20" height="20">
-              <use href="images/sprite.svg#icon-sunrise"></use>
-            </svg>
+            <div class="sunrise-svg" width="20" height="20">             
+            </div>
             <p class = "city-date__sunrise-and-sunset-left-elem">${unixTimeConverterHhMm(
               backendObjects.city.sunrise,
-            )}</p>
-            <svg class="sunset-svg" width="20" height="20">
-              <use href="images/sprite.svg#icon-sunset"></use>
-            </svg>
+            )}</p>            
+            <div class="sunset-svg" width="20" height="20">              
+            </div>
             <p>${unixTimeConverterHhMm(backendObjects.city.sunset)}</p>
           </div>
         </div>  `;
