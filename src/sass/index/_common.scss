@@ -33,7 +33,20 @@ body {
 }
 
 .section {
-  min-width: 100%;
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  @media screen and (max-width: $tablet) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    width: 768px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 1280px;
+  }
 }
 
 .section-not-active {
@@ -61,7 +74,7 @@ body {
 
 /*elementy tła */
 .bg-square {
-  position: absolute;
+  // position: absolute;
   border: 4px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   transform: rotate(-30deg);
@@ -69,13 +82,31 @@ body {
   height: 197.85px;
   border-radius: 30px;
 
-  &-left {
-    top: 151.37px;
-    left: -84px;
-  }
+  // &-left {
+  //   top: 151.37px;
+  //   left: -84px;
+  // }
 
-  &-right {
-    top: -86.08px;
-    right: -84px;
-  }
+  // &-right {
+  //   top: -86.08px;
+  //   right: -84px;
+  // }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin-inline: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff6b09;
+  border-radius: 50%;
 }

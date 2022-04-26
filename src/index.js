@@ -1,5 +1,5 @@
 import './sass/main.scss';
-import { getDailyWeather, showChart, closeChart } from './partials-js/chart';
+// import { getDailyWeather, showChart, closeChart } from './partials-js/chart';
 import { mainWeather } from './partials-js/weather';
 import {
   getCityWeather,
@@ -38,8 +38,8 @@ $submitBtn.addEventListener('click', async ev => {
 $Days5Btn.addEventListener('click', GenerateView5Days);
 todayBtn.addEventListener('click', setTodayAsActive);
 $Days5Btn.addEventListener('click', set5DaysAsActive);
-$btnShow.addEventListener('click', showChart);
-$btnClose.addEventListener('click', closeChart);
+// $btnShow.addEventListener('click', showChart);
+// $btnClose.addEventListener('click', closeChart);
 // dodawanie zdarzen
 
 // podstawowe ładowanie danych
