@@ -6,7 +6,9 @@ import { coordinates } from './data_fetch';
 //API Key
 const apiKey = '86882c431a5c1fa03f48939e3b313043&units=metric';
 //DOM imports
-const ctx = document.querySelector('#myChart');
+const $chart = document.querySelector('#myChart');
+const $btnShow = document.querySelector('.chart-btn__show');
+const $btnClose = document.querySelector('.chart-btn__close');
 //Axios get function
 async function getDailyWeather(coordinates, apiKey) {
   await axios
@@ -211,7 +213,7 @@ const apiResponse = {
     },
   ],
 };
-console.log(apiResponse);
+
 const labels = apiResponse.daily.map(element => {
   return format(element.dt, 'PP');
 });
@@ -227,7 +229,7 @@ const windSpeed = apiResponse.daily.map(element => {
 const pressure = apiResponse.daily.map(element => {
   return element.pressure;
 });
-const time = format(1650708000, 'LLLL d, R');
+const time = format(1650708001, 'LLLL d, R');
 console.log(time);
 const data = {
   labels: labels,
@@ -270,9 +272,19 @@ const config = {
 };
 const myChart = new Chart(document.getElementById('myChart'), config);
 
-//Funcion showing chart
-function showChart() {
-  const btnShow = document.querySelector('.chart-btn__show');
-  btnShow.classList.add('show');
-  btnShow.classList.remove('hidden');
+//Fukcje ukrywajace i pokazujace wykres
+export function showChart() {
+  $chart.classList.add('show');
+  $chart.classList.remove('hidden');
+  $btnShow.classList.add('hidden');
+  $btnShow.classList.remove('show');
+  $btnClose.classList.add('show');
+}
+export function closeChart() {
+  $chart.classList.add('hidden');
+  $chart.classList.remove('show');
+  $btnShow.classList.remove('hidden');
+  $btnShow.classList.add('show');
+  $btnClose.classList.add('hidden');
+  $btnClose.classList.remove('show');
 }
