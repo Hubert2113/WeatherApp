@@ -279,6 +279,7 @@ export function showChart() {
   $btnShow.classList.add('hidden');
   $btnShow.classList.remove('show');
   $btnClose.classList.add('show');
+  $btnClose.classList.remove('hidden');
 }
 export function closeChart() {
   $chart.classList.add('hidden');
