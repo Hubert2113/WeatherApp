@@ -1,69 +1,38 @@
-
 .submit-btn {
-
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    background-color: $submit-btn-color;
-    border-radius: 50%;
-    border-style: none;  
-    cursor: pointer;
-
-    @media screen and (max-width: $tablet) {
-
-        left: 272px;
-        top: 93px;
-    }
-
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    
-        left: 543px;
-        top: 120px;
-    }
-
-    @media screen and (min-width: $desktop) {
-    
-        left: 789px;
-        top: 139px;
-    }
+  // position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: $submit-btn-color;
+  border-radius: 50%;
+  border-style: none;
+  cursor: pointer;
 }
 
 .search-bar {
+  // position: absolute;
+  background-color: $txt-color;
+  border-radius: 30px;
+  border-style: none;
+  margin: 20px auto 0;
 
-    position: absolute;
-    background-color: $txt-color;
-    border-radius: 30px;
-    border-style: none; 
-        
-    @media screen and (max-width: $tablet) {   
+  @media screen and (max-width: $tablet) {
+    width: 280px;
+    height: 48px;
+    font-size: 14px;
+    margin: 20px auto 0;
+  }
 
-        width: 280px;
-        height: 48px;
-        top: 30px;
-        left: 20px;
-        font-size: 14px;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    width: 500px;
+    height: 48px;
+    font-size: 18px;
+    margin: 20px auto 0;
+  }
 
-    }
-      
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-
-        width: 500px;
-        height: 48px;
-        top: 60px;
-        left: 134px;
-        font-size: 18px;
-    }
-
-    @media screen and (min-width: $desktop) {
-
-        width: 520px;
-        height: 48px;
-        top: 79px;
-        left: 380px;
-        font-size: 18px;
-    }
+  @media screen and (min-width: $desktop) {
+    width: 520px;
+    height: 48px;
+    font-size: 18px;
+    margin: 20px auto 0;
+  }
 }
-        
-
-
-    
