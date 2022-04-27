@@ -12,8 +12,8 @@ export function mainWeather() {
     <div class="Days5_viev__icon Days5_viev__icon${cityData.list[0].weather[0].icon}"></div>
     <div><p class="weather_section_city_name">${city_name}</p></div>
     <div class="weather_section_city_pogoda">
-    <div>
-    <p class="today_current_temp">${Math.round(current_temp)}</p>
+    <div class="today_current_temp">
+    <p >${Math.round(current_temp)}</p>
     </div>
     <div class="min-max-container">
     <div class="min-max-txt-div">
