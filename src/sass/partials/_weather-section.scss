@@ -2,6 +2,8 @@
 
     background-color: $section-bg;
     position: absolute;
+    justify-content: center;
+    flex-direction: column;
 
     @media screen and (max-width: $tablet) {
         
@@ -31,11 +33,48 @@
         height: 300px;
         left: 830px;
         top: 259px;
-        border-radius: 34px 0px 0px 34px;  
+        border-radius: 34px 0px 0px 34px; 
+        margin-right: 0px; 
     }
 }
 
+.min-max-container {
+
+    @media screen and (max-width: $tablet) {
+    
+        margin-left: 20px;
+        width: 72px;
+        height: 40px;
+    }
+}
+
+.weather-txt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: $tablet) {
+
+        flex-direction: row;
+        margin-top: 9px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: $desktop) {
+
+        flex-direction: column;
+    }
+
+}
+
 .weather_section_city_name {
+    
         position: absolute; 
         width: 101px;
         height: 26px;
@@ -46,7 +85,10 @@
         color: #767D85;
 
     @media screen and (max-width: $tablet) {
-
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
         left: 110px;
         top: 236px;
         font-size: 16px;
@@ -79,6 +121,7 @@
         align-items: center;
         text-align: center;
         letter-spacing: 0.04em;
+        
 
     @media screen and (max-width: $tablet) {
 
@@ -98,6 +141,7 @@
         top: 363px;
         font-size: 90px;
         line-height: 108px;
+        margin-top: 10px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -107,6 +151,37 @@
         top: 364px;
         font-size: 90px;
         line-height: 108px;
+        margin-top: 10px;
+    }
+}
+
+.min-max-txt-div {
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+
+        display: flex;
+        margin-top: 16px;
+    }
+
+    @media screen and (min-width: $desktop) {
+
+        display: flex;
+        margin-top: 16px;
+    }
+}
+
+.min-max-value-div {
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+   
+        display: flex;
+         margin-top: 6px;
+    }
+
+@media screen and (min-width: $desktop) {
+
+        display: flex;
+        margin-top: 6px;
     }
 }
 
@@ -156,7 +231,7 @@
         align-items: center;
         text-align: center;        
         font-family: 'Lato';
-        color: $txt-color;
+        color: white;
 
     @media screen and (max-width: $tablet) {
          
