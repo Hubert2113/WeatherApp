@@ -1,5 +1,12 @@
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .submit-btn {
-  // position: absolute;
+  position: relative;
+  margin-left: -40px;
   width: 28px;
   height: 28px;
   background-color: $submit-btn-color;
@@ -13,26 +20,23 @@
   background-color: $txt-color;
   border-radius: 30px;
   border-style: none;
-  margin: 20px auto 0;
+  padding-left: 20px;
 
   @media screen and (max-width: $tablet) {
     width: 280px;
     height: 48px;
     font-size: 14px;
-    margin: 20px auto 0;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
     width: 500px;
     height: 48px;
     font-size: 18px;
-    margin: 20px auto 0;
   }
 
   @media screen and (min-width: $desktop) {
     width: 520px;
     height: 48px;
     font-size: 18px;
-    margin: 20px auto 0;
   }
 }
