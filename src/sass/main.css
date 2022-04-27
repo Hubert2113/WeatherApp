@@ -758,6 +758,18 @@ body {
   margin-top: 300px;
 }
 
+@media screen and (max-width: 768px) {
+  .date-quote__container {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .date-quote__container {
+    display: inline;
+  }
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -805,7 +817,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
-  height: 2px;
+  height: 4px;
 }
 
 /* Track */
@@ -818,7 +830,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #ff6b09;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .history {
@@ -1375,8 +1387,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .chart-btn__show {
