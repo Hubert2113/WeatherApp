@@ -5,21 +5,18 @@
         width: 280px;
         margin-top: 43.59px;
         margin-left: 20px;
-        margin-right: 20px;
     }
 
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
 
         width: 379px; 
         margin-top: 63px;
-        margin-left: 234px;
     }
 
     @media screen and (min-width: $desktop) {
 
         width: 340px;
         top: 702px;
-        margin-left: 830px;
 
     }
 }
