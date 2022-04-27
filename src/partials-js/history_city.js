@@ -1,3 +1,4 @@
+import { cityData } from '..';
 import { saveStorage, loadStorage, removeStorage } from './storage';
 
 export const arrayOfKey = [];
@@ -60,6 +61,8 @@ function GenerateViewHistory(arrayOfKey, reload) {
       historySection.append(history);
     });
     const $deleteButtons = document.querySelectorAll('.history_button_delete');
+    const $historyButtons = document.querySelectorAll('.history_button_link');
+
     // dodawanie event do kazdego przycisku w histori
     for (let i = 0; i < $deleteButtons.length; i++) {
       $deleteButtons[i].addEventListener('click', ev => {
@@ -67,6 +70,16 @@ function GenerateViewHistory(arrayOfKey, reload) {
         let element = ev.path[0].attributes[1].nodeValue;
         // sprawdzenie czy nie usuniesz cityData
         if (element !== 'cityData') {
+          HistoryCityDelete(element);
+          location.reload();
+        }
+      });
+      $historyButtons[i].addEventListener('click', ev => {
+        ev.preventDefault();
+        let element = ev.path[0].attributes[1].nodeValue;
+        if (element !== 'cityData') {
+          let object = loadStorage(element);
+          saveStorage('cityData', object);
           HistoryCityDelete(element);
           location.reload();
         }

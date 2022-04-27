@@ -57,6 +57,15 @@ export function GenerateView5Days() {
     for (let index = 0; index < 33; index += 8) {
       const Days5 = document.createElement('div');
       Days5.classList.add('Days5_viev');
+      let temp_min = cityData.list[0].main.temp_min;
+      let temp_max = cityData.list[0].main.temp_max;
+      let temponary;
+      for (let j = 0; j < 8; j++) {
+        temponary = cityData.list[j + index].main.temp_min;
+        if (temponary < temp_min) temp_min = temponary;
+        temponary = cityData.list[j + index].main.temp_max;
+        if (temponary > temp_max) temp_max = temponary;
+      }
       let data = new Date(cityData.list[index].dt_txt);
       let dataWeek = data.toLocaleDateString('en-us', {
         weekday: 'long',
@@ -65,6 +74,7 @@ export function GenerateView5Days() {
         month: 'short',
         day: 'numeric',
       });
+
       const days5Array = `
       <div class="Days5_viev__week">
       <p>${dataWeek}</p>
@@ -79,8 +89,8 @@ export function GenerateView5Days() {
       <p>max</p>
       </div>
       <div class="Days5_viev__tempValue">
-      <p>${Math.round(cityData.list[index].main.temp_min)} &deg</p>
-      <p>${Math.round(cityData.list[index].main.temp_max)} &deg</p>
+      <p>${Math.round(temp_min)} &deg</p>
+      <p>${Math.round(temp_max)} &deg</p>
       </div>
       <div class="Days5_viev__moreInfo">
       <a href="${cityData.city.name}">more info</a>
@@ -96,20 +106,20 @@ export function GenerateView5Days() {
   for (let i = 0; i < $moreInfoButtons.length; i++) {
     $moreInfoButtons[i].addEventListener('click', ev => {
       ev.preventDefault();
-      console.log(cityData);
+      // console.log(cityData);
       $button.classList.remove('btn-container--margin');
       while ($moreInfoContainer.firstElementChild) {
         $moreInfoContainer.removeChild($moreInfoContainer.firstElementChild);
       }
       for (let j = i * 7; j < i * 7 + 7; j++) {
-        console.log(cityData.list[j].dt);
+        // console.log(cityData.list[j].dt);
         let time = new Date(cityData.list[j].dt_txt);
         const $moreInfoItemBox = document.createElement('div');
         $moreInfoItemBox.classList.add('more-info__item');
         $moreInfoContainer.append($moreInfoItemBox);
         const $futureTime = document.createElement('p');
         $futureTime.classList.add('more-info__time');
-        console.log(time.getHours());
+        // console.log(time.getHours());
         if (time.getHours() < 10) {
           $futureTime.textContent = `0${time.getHours()}:00`;
         } else {

@@ -3,8 +3,18 @@ import { cityData } from '../index';
 export function mainWeather() {
   const city_name = cityData.city.name;
   const current_temp = cityData.list[0].main.temp;
-  const min_temp = cityData.list[0].main.temp_min;
-  const max_temp = cityData.list[0].main.temp_max;
+  let min_temp = cityData.list[0].main.temp_min;
+  let max_temp = cityData.list[0].main.temp_max;
+
+  for (let index = 0; index < 33; index += 8) {
+    let temponary;
+    for (let j = 0; j < 8; j++) {
+      temponary = cityData.list[j + index].main.temp_min;
+      if (temponary < min_temp) min_temp = temponary;
+      temponary = cityData.list[j + index].main.temp_max;
+      if (temponary > max_temp) max_temp = temponary;
+    }
+  }
 
   const $todaySection = document.querySelector('.weather-container');
   const today_section = `
