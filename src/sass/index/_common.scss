@@ -59,6 +59,12 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 300px;
+@media screen and (max-width: $tablet) {
+  display: inline;
+}
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+  display: inline;
+  }
 }
 
 .container {
