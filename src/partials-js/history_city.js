@@ -12,19 +12,19 @@ export function historyCityVieve(reload) {
   const storageLength = localStorage.length;
 
   //======usuwanie jezeli localStorage jest dłuższy niz 4
-  if (storageLength > 4) {
-    let usunIndex = 0;
-    let flaga = true;
-    let usun;
-    while (flaga) {
-      usun = window.localStorage.key(usunIndex);
-      usunIndex++;
-      if (usun !== 'cityData') flaga = false;
-    }
-    console.log('usuwam');
-    console.log(usun);
-    HistoryCityDelete(usun);
-  }
+  // if (storageLength > 4) {
+  //   let usunIndex = 0;
+  //   let flaga = true;
+  //   let usun;
+  //   while (flaga) {
+  //     usun = window.localStorage.key(usunIndex);
+  //     usunIndex++;
+  //     if (usun !== 'cityData') flaga = false;
+  //   }
+  //   console.log('usuwam');
+  //   console.log(usun);
+  //   HistoryCityDelete(usun);
+  // }
   //======usuwanie jezeli localStorage jest dłuższy niz 4
 
   const arrayOfKey = [];
@@ -79,8 +79,10 @@ function GenerateViewHistory(arrayOfKey, reload) {
         let element = ev.path[0].attributes[1].nodeValue;
         if (element !== 'cityData') {
           let object = loadStorage(element);
-          saveStorage('cityData', object);
           HistoryCityDelete(element);
+          let oldCityData = loadStorage('cityData');
+          saveStorage('cityData', object);
+          saveStorage(oldCityData.city.name, oldCityData);
           location.reload();
         }
       });
