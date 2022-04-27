@@ -136,18 +136,14 @@
 }
 
 .today_temp_txt {
-  // position: absolute;
   font-family: 'Lato';
-  // display: flex;
   align-items: center;
   text-align: center;
   color: #767d85;
 
   @media screen and (max-width: $tablet) {
-    width: 26px;
+    width: 35px;
     height: 20px;
-    // left: 170px;
-    // top: 279px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -155,8 +151,6 @@
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
     width: 50px;
     height: 20px;
-    // left: 324px;
-    // top: 475px;
     font-size: 18px;
     line-height: 22px;
   }
@@ -164,42 +158,26 @@
   @media screen and (min-width: $desktop) {
     width: 50px;
     height: 20px;
-    // left: 974px;
-    // top: 476px;
     font-size: 18px;
     line-height: 22px;
   }
 }
 
 .today_temp_value {
-  // position: absolute;
-  // display: flex;
   align-items: center;
   text-align: center;
   font-family: 'Lato';
   color: $txt-color;
 
   @media screen and (max-width: $tablet) {
-    width: 26px;
-    height: 20px;
-    // left: 170px;
-    // top: 299px;
     font-size: 16px;
     line-height: 19px;
   }
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    width: 50px;
-    height: 20px;
-    // left: 394px;
-    // top: 501px;
     font-size: 18px;
     line-height: 22px;
   }
   @media screen and (min-width: $desktop) {
-    width: 50px;
-    height: 20px;
-    // left: 1044px;
-    // top: 502px;
     font-size: 18px;
     line-height: 22px;
   }
