@@ -55,6 +55,13 @@ body {
   visibility: hidden;
 }
 
+.date-quote__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 300px;
+}
+
 .container {
   display: flex;
   justify-content: center;
