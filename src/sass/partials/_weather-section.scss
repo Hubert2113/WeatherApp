@@ -38,12 +38,12 @@
 
 .min-max-container {
 
-    @media screen and (max-width: $tablet) {
         display: flex;
+        justify-content: center;
         margin-left: 20px;
         width: 72px;
         height: 40px;
-    }
+    
 }
 
 .weather-txt-container {

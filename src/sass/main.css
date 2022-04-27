@@ -477,15 +477,16 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .min-max-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 20px;
-    width: 72px;
-    height: 40px;
-  }
+.min-max-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 20px;
+  width: 72px;
+  height: 40px;
 }
 
 .weather-txt-container {
