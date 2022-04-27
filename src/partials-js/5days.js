@@ -5,14 +5,16 @@ export function Day5Hiden() {
   const $5DaysSection = document.querySelector('.Days5');
   const $5DaysCityNAme = document.querySelector('.Day5CityName');
   const $Today = document.querySelector('.weather-container');
-  const $Timer = document.querySelector('.date-container-bg');
+  const $Timer = document.querySelector('.date-quote__container');
   const $button = document.querySelector('.btn-container');
+  const $buttonChart = document.querySelector('.chart-btn__show');
 
   $5DaysSection.classList.add('Days5_hiden');
   $5DaysCityNAme.classList.add('Days5_hiden');
   $Today.classList.remove('Days5_hiden');
   $Timer.classList.remove('Days5_hiden');
   $button.classList.remove('btn-container--margin');
+  $buttonChart.classList.add('Days5_hiden');
 
   while ($5DaysSection.firstChild) {
     $5DaysSection.removeChild($5DaysSection.firstChild);
@@ -28,8 +30,9 @@ export function GenerateView5Days() {
   const $5DaysSection = document.querySelector('.Days5');
   const $5DaysCityNAme = document.querySelector('.Day5CityName');
   const $Today = document.querySelector('.weather-container');
-  const $Timer = document.querySelector('.date-container-bg');
+  const $Timer = document.querySelector('.date-quote__container');
   const $button = document.querySelector('.btn-container');
+  const $buttonChart = document.querySelector('.chart-btn__show');
 
   const $vievIsDone = document.querySelector('.Days5_viev');
 
@@ -39,6 +42,7 @@ export function GenerateView5Days() {
     $Today.classList.add('Days5_hiden');
     $Timer.classList.add('Days5_hiden');
     $button.classList.add('btn-container--margin');
+    $buttonChart.classList.remove('Days5_hiden');
   }
 
   if (!$vievIsDone) {
@@ -92,8 +96,8 @@ export function GenerateView5Days() {
   for (let i = 0; i < $moreInfoButtons.length; i++) {
     $moreInfoButtons[i].addEventListener('click', ev => {
       ev.preventDefault();
-      // showMoreInfo(i);
       console.log(cityData);
+      $button.classList.remove('btn-container--margin');
       while ($moreInfoContainer.firstElementChild) {
         $moreInfoContainer.removeChild($moreInfoContainer.firstElementChild);
       }
