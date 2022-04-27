@@ -267,6 +267,7 @@
     visibility: hidden;
     margin: 0;
     display: none;
+    margin: 0;
   }
 }
 
@@ -275,7 +276,7 @@
   flex-wrap: nowrap;
   overflow-x: visible;
   width: 900px;
-  &__item{
+  &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -287,38 +288,38 @@
     padding: 15px 16px;
     color: #fff;
   }
-  &__time{
+  &__time {
     font-family: 'lato';
     font-size: 14px;
     opacity: 0.54;
   }
-  &__temp{
-    color: #FF6B09;
+  &__temp {
+    color: #ff6b09;
     font-family: 'lato';
     font-weight: 700;
     font-size: 25px;
   }
-  &__detail{
+  &__detail {
     display: flex;
-    &-pressure{
+    &-pressure {
       width: 20px;
       height: 20px;
       background-image: url('../images/barometer.png');
       background-size: cover;
     }
-    &-humidity{
+    &-humidity {
       width: 20px;
       height: 20px;
       background-image: url('../images/humidity.png');
       background-size: cover;
     }
-    &-wind{
+    &-wind {
       width: 20px;
       height: 20px;
       background-image: url('../images/wind.png');
       background-size: cover;
     }
-    &-value{
+    &-value {
       opacity: 0.54;
       margin-left: 10px;
     }
