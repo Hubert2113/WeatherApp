@@ -1,3 +1,4 @@
+import { addMonths } from 'date-fns';
 import { cityData } from '../index';
 
 export function Day5Hiden() {
@@ -87,16 +88,53 @@ export function GenerateView5Days() {
   for(let i = 0; i < $moreInfoButtons.length; i++){
     $moreInfoButtons[i].addEventListener("click", (ev) => {
       ev.preventDefault();
-      showMoreInfo(i);
+      // showMoreInfo(i);
+      console.log(cityData);
+      while($moreInfoContainer.firstElementChild){
+        $moreInfoContainer.removeChild($moreInfoContainer.firstElementChild);
+      }
+      for(let j = i * 7; j < i * 7 + 7; j++){
+        console.log(cityData.list[j].dt);
+        let time = new Date(cityData.list[j].dt_txt);
+        const $moreInfoItemBox = document.createElement('div');
+        $moreInfoItemBox.classList.add('more-info__item');
+        $moreInfoContainer.append($moreInfoItemBox);
+        const $futureTime = document.createElement('p');
+        $futureTime.classList.add("more-info__time");
+        console.log(time.getHours());
+        if(time.getHours() < 10){
+          $futureTime.textContent = `0${time.getHours()}:00`;
+        }else{
+          $futureTime.textContent = `${time.getHours()}:00`;
+        }
+        $moreInfoItemBox.append($futureTime);
+        const $futureWeatherIcon = document.createElement("div");
+        $futureWeatherIcon.classList.add(`Days5_viev__icon${cityData.list[i].weather[0].icon}`, "Days5_viev__icon");;
+        $moreInfoItemBox.append($futureWeatherIcon);
+        const $futureTemp = document.createElement('p');
+        $futureTemp.classList.add('more-info__temp');
+        $futureTemp.textContent = `${Math.round(cityData.list[i].main.temp)}\xB0`;
+        $moreInfoItemBox.append($futureTemp);
+
+        $moreInfoItemBox.insertAdjacentHTML('beforeend', 
+        `<div class="more-info__detail">
+          <div class="more-info__detail-pressure"></div>
+          <div class="more-info__detail-value">${cityData.list[i].main.pressure} mm</div>
+        </div>
+        <div class="more-info__detail">
+          <div class="more-info__detail-humidity"></div>
+          <div class="more-info__detail-value">${cityData.list[i].main.humidity}%</div>
+        </div>
+        <div class="more-info__detail">
+          <div class="more-info__detail-wind"></div>
+          <div class="more-info__detail-value">${cityData.list[i].wind.speed} m/s</div>
+        </div>`
+        );
+      }
     });
   }
 }
 
 function showMoreInfo(dayNumber){
-  for(let i = dayNumber * 8; i < dayNumber * 8 + 8; i++){
-    const $moreInfoItemBox = document.createElement('div');
-    $moreInfoItemBox.classList.add('more-info__item');
-    $moreInfoContainer.append($moreInfoItemBox);
-
-  }
+  
 }
