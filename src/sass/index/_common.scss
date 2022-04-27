@@ -27,12 +27,8 @@ body {
   background: linear-gradient(0.56deg, #000000 -13.48%, rgba(0, 0, 0, 0) 78.75%),
     url('../images/bg-desktop.jpg');
   background-size: cover;
-  height: 100vh;
   width: 100vw;
   margin: auto;
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    height: 100%;
-  }
 }
 
 .section {
@@ -54,7 +50,7 @@ body {
   visibility: hidden;
 }
 
-.date-quote__container{
+.date-quote__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
