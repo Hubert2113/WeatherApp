@@ -36,6 +36,46 @@
   }
 }
 
+.min-max-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  width: 72px;
+  height: 40px;
+}
+
+.weather-txt-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+  margin-left: auto;
+  margin-right: auto;
+
+  
+
+  @media screen and (max-width: $tablet) {
+    // flex-direction: column;
+    margin-top: 9px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    // flex-direction: column;
+  }
+
+  @media screen and (min-width: $desktop) {
+    // flex-direction: column;
+  }
+}
+.weather_section_city_pogoda {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+   @media screen and (min-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
 .weather_section_city_name {
   // position: absolute;
   width: 101px;

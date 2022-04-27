@@ -8,15 +8,24 @@ export function mainWeather() {
 
   const $todaySection = document.querySelector('.weather-container');
   const today_section = `
-    <p class="weather_section_city_name">${city_name}</p>
-    <p class="today_current_temp">${Math.round(current_temp)}&deg</p>
+  <div class="weather-txt-container">
+    <div class="Days5_viev__icon Days5_viev__icon${cityData.list[0].weather[0].icon}"></div>
+    <div><p class="weather_section_city_name">${city_name}</p></div>
+    <div class="weather_section_city_pogoda">
     <div>
-    <p class="today_temp_txt">min</p>
-    <p class="today_temp_txt">max</p>
+    <p class="today_current_temp">${Math.round(current_temp)}</p>
     </div>
-    <div>
+    <div class="min-max-container">
+    <div class="min-max-txt-div">
+    <p class="today_temp_txt">min</p>
     <p class="today_temp_value">${Math.round(min_temp)} &deg</p>
+    </div>
+    <div class="min-max-value-div">
+    <p class="today_temp_txt">max</p>
     <p class="today_temp_value">${Math.round(max_temp)} &deg</p>
+    </div>
+    </div>
+    </div>
     `;
   $todaySection.innerHTML = today_section;
 }
