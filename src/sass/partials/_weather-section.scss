@@ -39,7 +39,7 @@
 .min-max-container {
 
     @media screen and (max-width: $tablet) {
-    
+        display: flex;
         margin-left: 20px;
         width: 72px;
         height: 40px;
