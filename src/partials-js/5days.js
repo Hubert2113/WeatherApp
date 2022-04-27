@@ -19,6 +19,8 @@ export function Day5Hiden() {
   }
 }
 
+let $moreInfoContainer = null;
+
 export function GenerateView5Days() {
   const $5DaysSection = document.querySelector('.Days5');
   const $5DaysCityNAme = document.querySelector('.Day5CityName');
@@ -35,6 +37,9 @@ export function GenerateView5Days() {
   }
 
   if (!$vievIsDone) {
+    const $days5Container = document.createElement('div');
+    $days5Container.classList.add('Days5-container');
+    $5DaysSection.append($days5Container);
     const cityNAme = document.createElement('div');
     const nameCity = `<p>${cityData.city.name}, ${cityData.city.country}</p>`;
     cityNAme.innerHTML = nameCity;
@@ -53,26 +58,45 @@ export function GenerateView5Days() {
       });
       const days5Array = `
       <div class="Days5_viev__week">
-    <p>${dataWeek}</p>
-    </div>
-    <div class="Days5_viev__day">
-    <p>${dataDay}</p>
-    </div>
-    <div class="Days5_viev__icon Days5_viev__icon${cityData.list[index].weather[0].icon}">
-    </div>
-    <div class="Days5_viev__temp">
-    <p>min</p>
-    <p>max</p>
-    </div>
-    <div class="Days5_viev__tempValue">
-    <p>${Math.round(cityData.list[index].main.temp_min)} &deg</p>
-    <p>${Math.round(cityData.list[index].main.temp_max)} &deg</p>
-    </div>
-    <div class="Days5_viev__moreInfo">
-    <a href="${cityData.city.name}">more info</a>
-    </div>`;
+      <p>${dataWeek}</p>
+      </div>
+      <div class="Days5_viev__day">
+      <p>${dataDay}</p>
+      </div>
+      <div class="Days5_viev__icon Days5_viev__icon${cityData.list[index].weather[0].icon}">
+      </div>
+      <div class="Days5_viev__temp">
+      <p>min</p>
+      <p>max</p>
+      </div>
+      <div class="Days5_viev__tempValue">
+      <p>${Math.round(cityData.list[index].main.temp_min)} &deg</p>
+      <p>${Math.round(cityData.list[index].main.temp_max)} &deg</p>
+      </div>
+      <div class="Days5_viev__moreInfo">
+      <a href="${cityData.city.name}">more info</a>
+      </div>`;
       Days5.innerHTML = days5Array;
-      $5DaysSection.append(Days5);
+      $days5Container.append(Days5);
     }
+    $moreInfoContainer = document.createElement('div');
+    $moreInfoContainer.classList.add("more-info");
+    $5DaysSection.append($moreInfoContainer);
+  }
+  const $moreInfoButtons = document.querySelectorAll(".Days5_viev__moreInfo a");
+  for(let i = 0; i < $moreInfoButtons.length; i++){
+    $moreInfoButtons[i].addEventListener("click", (ev) => {
+      ev.preventDefault();
+      showMoreInfo(i);
+    });
+  }
+}
+
+function showMoreInfo(dayNumber){
+  for(let i = dayNumber * 8; i < dayNumber * 8 + 8; i++){
+    const $moreInfoItemBox = document.createElement('div');
+    $moreInfoItemBox.classList.add('more-info__item');
+    $moreInfoContainer.append($moreInfoItemBox);
+
   }
 }

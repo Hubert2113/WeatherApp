@@ -34,9 +34,9 @@
     @media screen and (min-width: $desktop) {
         flex-wrap: wrap;
         box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
-        width: 450px;
-        height: 300px;
-        border-radius: 34px 0px 0px 34px;
+        width: 630px;
+        height: 278px;
+        border-radius: 0 0 34px 34px;
     }
 };
 
@@ -199,6 +199,10 @@
         &__month-and-time-left-elem{
             padding-right: 40px;
         }
+
+        &__month-and-time-right-elem {
+            padding-right: 40px;
+        }
         
         &__sunrise-and-sunset {
             display: flex;
@@ -210,7 +214,6 @@
 
         &__sunrise-and-sunset-left-elem{
             padding-right: 40px;
-            padding-left: 40px;
         }
     }
  
@@ -218,5 +221,17 @@
 
 .sunrise-svg,
 .sunset-svg{
-    fill: orangered;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+};
+
+.sunrise-svg{
+    background-image: url('../images/008-sunrise.svg');
+};
+
+.sunset-svg {
+    background-image: url('../images/009-sunset.svg');
 }
+
