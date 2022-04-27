@@ -49,7 +49,7 @@
             box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
     width: 630px;
     height: 278px;
-    border-radius: 0 0 34px 34px;
+    border-radius: 34px 34px 34px 34px;
   }
 }
 
@@ -350,7 +350,6 @@
   .quote-container {
     margin-top: 43.59px;
     margin-left: 20px;
-    margin-right: 20px;
   }
 }
 
@@ -358,15 +357,12 @@
   .quote-container {
     width: 379px;
     margin-top: 63px;
-    margin-left: 234px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .quote-container {
     width: 340px;
-    top: 702px;
-    margin-left: 830px;
   }
 }
 
@@ -483,7 +479,7 @@
             box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
     width: 450px;
     height: 300px;
-    border-radius: 0 34px 34px 0;
+    border-radius: 34px 34px 34px 34px;
     margin-top: 20px;
   }
 }
@@ -713,15 +709,8 @@ body {
 .background {
   background: linear-gradient(0.56deg, #000000 -13.48%, rgba(0, 0, 0, 0) 78.75%), url("../images/bg-desktop.jpg");
   background-size: cover;
-  height: 100vh;
   width: 100vw;
   margin: auto;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .background {
-    height: 100%;
-  }
 }
 
 .section {
@@ -754,6 +743,19 @@ body {
 
 .section-not-active {
   visibility: hidden;
+}
+
+.date-quote__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 300px;
 }
 
 .container {
@@ -921,7 +923,6 @@ body {
           box-shadow: 0px 8px 43px rgba(16, 33, 54, 0.6);
   border-radius: 34px;
   margin: 0 auto;
-  overflow: auto;
   /* width */
 }
 
@@ -953,6 +954,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: auto;
 }
 
 .Days5_viev {
@@ -1273,8 +1275,7 @@ body {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  overflow-x: visible;
-  width: 900px;
+  overflow: auto;
 }
 
 .more-info__item {
@@ -1304,7 +1305,7 @@ body {
 }
 
 .more-info__temp {
-  color: #FF6B09;
+  color: #ff6b09;
   font-family: 'lato';
   font-weight: 700;
   font-size: 25px;
@@ -1388,7 +1389,6 @@ body {
           justify-content: center;
   width: 110px;
   height: 28px;
-  margin-bottom: 30px;
   color: #ff6b09;
   background: rgba(255, 255, 255, 0);
   border: 0px;
