@@ -34,11 +34,12 @@
 
   @media screen and (min-width: $desktop) {
     width: 1060px;
-    padding: 40px 50px;
+    padding: 40px 80px;
   }
 
   &-container{
     display: flex;
+    justify-content: space-between;
   }
 
   &_viev {
@@ -243,14 +244,14 @@
 
 .more-info{
   display: flex;
-  justify-content: space-around;
   &__item{
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 25px;
     height: 200px;
-    width: 100px;
+    width: 120px;
+    margin-right: 10px;
   }
 }
 .Day5CityName {
