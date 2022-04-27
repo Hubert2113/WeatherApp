@@ -103,7 +103,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
-  height: 2px;
+  height: 4px;
 }
 
 /* Track */
@@ -116,5 +116,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #ff6b09;
-  border-radius: 50%;
+  border-radius: 10%;
 }
+
+
