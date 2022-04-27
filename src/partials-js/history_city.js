@@ -11,21 +11,21 @@ export function historyCityVieve(reload) {
   //sprawdzenie długości local storage
   const storageLength = localStorage.length;
 
-  //======usuwanie jezeli localStorage jest dłuższy niz 4
-  // if (storageLength > 4) {
-  //   let usunIndex = 0;
-  //   let flaga = true;
-  //   let usun;
-  //   while (flaga) {
-  //     usun = window.localStorage.key(usunIndex);
-  //     usunIndex++;
-  //     if (usun !== 'cityData') flaga = false;
-  //   }
-  //   console.log('usuwam');
-  //   console.log(usun);
-  //   HistoryCityDelete(usun);
-  // }
-  //======usuwanie jezeli localStorage jest dłuższy niz 4
+  //======usuwanie jezeli localStorage jest dłuższy niz 10
+  if (storageLength > 10) {
+    let usunIndex = 0;
+    let flaga = true;
+    let usun;
+    while (flaga) {
+      usun = window.localStorage.key(usunIndex);
+      usunIndex++;
+      if (usun !== 'cityData') flaga = false;
+    }
+    console.log('usuwam');
+    console.log(usun);
+    HistoryCityDelete(usun);
+  }
+  //======usuwanie jezeli localStorage jest dłuższy niz 10
 
   const arrayOfKey = [];
   for (let index = 0; index < storageLength; index++) {
@@ -74,6 +74,8 @@ function GenerateViewHistory(arrayOfKey, reload) {
           location.reload();
         }
       });
+
+      //dodanie eventu do przełączania pomiedzy miastami z historii
       $historyButtons[i].addEventListener('click', ev => {
         ev.preventDefault();
         let element = ev.path[0].attributes[1].nodeValue;

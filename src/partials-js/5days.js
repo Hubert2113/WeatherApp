@@ -8,6 +8,8 @@ export function Day5Hiden() {
   const $Timer = document.querySelector('.date-quote__container');
   const $button = document.querySelector('.btn-container');
   const $buttonChart = document.querySelector('.chart-btn__show');
+  const $buttonChart2 = document.querySelector('.chart-btn__close');
+
 
   $5DaysSection.classList.add('Days5_hiden');
   $5DaysCityNAme.classList.add('Days5_hiden');
@@ -15,6 +17,8 @@ export function Day5Hiden() {
   $Timer.classList.remove('Days5_hiden');
   $button.classList.remove('btn-container--margin');
   $buttonChart.classList.add('Days5_hiden');
+  $buttonChart2.classList.add('Days5_hiden');
+
 
   while ($5DaysSection.firstChild) {
     $5DaysSection.removeChild($5DaysSection.firstChild);
@@ -33,6 +37,8 @@ export function GenerateView5Days() {
   const $Timer = document.querySelector('.date-quote__container');
   const $button = document.querySelector('.btn-container');
   const $buttonChart = document.querySelector('.chart-btn__show');
+  const $buttonChart2 = document.querySelector('.chart-btn__close');
+
 
   const $vievIsDone = document.querySelector('.Days5_viev');
 
@@ -43,6 +49,8 @@ export function GenerateView5Days() {
     $Timer.classList.add('Days5_hiden');
     $button.classList.add('btn-container--margin');
     $buttonChart.classList.remove('Days5_hiden');
+    $buttonChart2.classList.remove('Days5_hiden');
+
   }
 
   if (!$vievIsDone) {
