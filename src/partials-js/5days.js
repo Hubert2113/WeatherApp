@@ -115,7 +115,7 @@ export function GenerateView5Days() {
       while ($moreInfoContainer.firstElementChild) {
         $moreInfoContainer.removeChild($moreInfoContainer.firstElementChild);
       }
-      for (let j = i * 8; j < i * 8 + 8; j++) {
+      for (let j = i * 8; j < i * 8 + 7; j++) {
         // console.log(cityData.list[j].dt);
         let time = new Date(cityData.list[j].dt_txt);
         const $moreInfoItemBox = document.createElement('div');
