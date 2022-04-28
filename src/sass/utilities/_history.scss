@@ -1,17 +1,24 @@
 .history {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px auto 0;
+  overflow: auto;
+  padding-bottom: 10px;
 
   @media screen and (max-width: $tablet) {
     margin-top: 20px;
     font-size: 12px;
+    width: 280px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
     margin-top: 20px;
+    width: 500px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 520px;
   }
 
   &_button {
@@ -22,7 +29,7 @@
     display: flex;
     align-items: center;
     padding: 0px 12px;
-    min-width: 72px;
+    // min-width: 100px;
     height: 28px;
     margin: 0 5px;
     &_link {
