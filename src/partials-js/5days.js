@@ -10,7 +10,6 @@ export function Day5Hiden() {
   const $buttonChart = document.querySelector('.chart-btn__show');
   const $buttonChart2 = document.querySelector('.chart-btn__close');
 
-
   $5DaysSection.classList.add('Days5_hiden');
   $5DaysCityNAme.classList.add('Days5_hiden');
   $Today.classList.remove('Days5_hiden');
@@ -18,7 +17,6 @@ export function Day5Hiden() {
   $button.classList.remove('btn-container--margin');
   $buttonChart.classList.add('Days5_hiden');
   $buttonChart2.classList.add('Days5_hiden');
-
 
   while ($5DaysSection.firstChild) {
     $5DaysSection.removeChild($5DaysSection.firstChild);
@@ -39,7 +37,6 @@ export function GenerateView5Days() {
   const $buttonChart = document.querySelector('.chart-btn__show');
   const $buttonChart2 = document.querySelector('.chart-btn__close');
 
-
   const $vievIsDone = document.querySelector('.Days5_viev');
 
   if ($5DaysSection.classList.contains('Days5_hiden')) {
@@ -50,7 +47,6 @@ export function GenerateView5Days() {
     $button.classList.add('btn-container--margin');
     $buttonChart.classList.remove('Days5_hiden');
     $buttonChart2.classList.remove('Days5_hiden');
-
   }
 
   if (!$vievIsDone) {
