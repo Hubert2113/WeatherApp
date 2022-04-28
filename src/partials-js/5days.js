@@ -115,7 +115,7 @@ export function GenerateView5Days() {
       while ($moreInfoContainer.firstElementChild) {
         $moreInfoContainer.removeChild($moreInfoContainer.firstElementChild);
       }
-      for (let j = i * 7; j < i * 7 + 7; j++) {
+      for (let j = i * 8; j < i * 8 + 7; j++) {
         // console.log(cityData.list[j].dt);
         let time = new Date(cityData.list[j].dt_txt);
         const $moreInfoItemBox = document.createElement('div');
@@ -132,28 +132,28 @@ export function GenerateView5Days() {
         $moreInfoItemBox.append($futureTime);
         const $futureWeatherIcon = document.createElement('div');
         $futureWeatherIcon.classList.add(
-          `Days5_viev__icon${cityData.list[i].weather[0].icon}`,
+          `Days5_viev__icon${cityData.list[j].weather[0].icon}`,
           'Days5_viev__icon',
         );
         $moreInfoItemBox.append($futureWeatherIcon);
         const $futureTemp = document.createElement('p');
         $futureTemp.classList.add('more-info__temp');
-        $futureTemp.textContent = `${Math.round(cityData.list[i].main.temp)}\xB0`;
+        $futureTemp.textContent = `${Math.round(cityData.list[j].main.temp)}\xB0`;
         $moreInfoItemBox.append($futureTemp);
 
         $moreInfoItemBox.insertAdjacentHTML(
           'beforeend',
           `<div class="more-info__detail">
           <div class="more-info__detail-pressure"></div>
-          <div class="more-info__detail-value">${cityData.list[i].main.pressure} mm</div>
+          <div class="more-info__detail-value">${cityData.list[j].main.pressure} mm</div>
         </div>
         <div class="more-info__detail">
           <div class="more-info__detail-humidity"></div>
-          <div class="more-info__detail-value">${cityData.list[i].main.humidity}%</div>
+          <div class="more-info__detail-value">${cityData.list[j].main.humidity}%</div>
         </div>
         <div class="more-info__detail">
           <div class="more-info__detail-wind"></div>
-          <div class="more-info__detail-value">${cityData.list[i].wind.speed} m/s</div>
+          <div class="more-info__detail-value">${cityData.list[j].wind.speed} m/s</div>
         </div>`,
         );
       }
